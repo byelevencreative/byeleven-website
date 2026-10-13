@@ -193,7 +193,7 @@ a:hover{color:#6E8090}
 </a>
 </div>
 </sc-if>
-<sc-if value="{{isSocial}}" hint-placeholder-val="{{false}}">
+<sc-if value="{{isSocial}}" hint-placeholder-val="{{true}}">
 <div class="w-grid" style="display: flex; flex-direction: column; gap: 10px">
 <div style="display: flex; gap: 10px">
 <a class="w-tile" href="agaru.html" aria-label="Agaru Sports, Lost in the Landscape social media campaign" style="width: 810px; height: 1000px">
@@ -214,7 +214,7 @@ a:hover{color:#6E8090}
 </a>
 </div>
 </sc-if>
-<sc-if value="{{isWeb}}" hint-placeholder-val="{{true}}">
+<sc-if value="{{isWeb}}" hint-placeholder-val="{{false}}">
 <div class="w-grid" style="display: flex; flex-direction: column; gap: 110px">
 <div style="display: grid; grid-template-columns: minmax(0, 1fr) 620px; column-gap: 100px; align-items: center">
 <div style="display: flex; flex-direction: column; gap: 26px">
@@ -287,7 +287,7 @@ a:hover{color:#6E8090}
 class Component extends DCLogic {
 constructor(props) {
 super(props);
-this.state = { cat: 'web' };
+this.state = { cat: 'social' };
 this.pickBrand = () => this.setState({ cat: 'brand' });
 this.pickSocial = () => this.setState({ cat: 'social' });
 this.pickWeb = () => this.setState({ cat: 'web' });

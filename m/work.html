@@ -215,12 +215,11 @@ a:hover{color:#6E8090}
 <p class="b11-rise b11-d4" style="margin: 0; font-size: 14px; line-height: 1.9; font-weight: 300; color: #5E4A38">Every project is a partnership: people working with people, from the first idea to the world.</p>
 </div>
 <div role="group" aria-label="Filter the portfolio" class="b11-rise b11-d5" style="padding: 0 24px 56px; display: flex; flex-direction: column; gap: 10px">
-<button type="button" class="{{brandCls}}" aria-pressed="{{brandOn}}" onClick="{{pickBrand}}">BRANDING &amp; DESIGN</button>
 <button type="button" class="{{socialCls}}" aria-pressed="{{socialOn}}" onClick="{{pickSocial}}">SOCIAL MEDIA</button>
 <button type="button" class="{{webCls}}" aria-pressed="{{webOn}}" onClick="{{pickWeb}}">WEB DEVELOPMENT</button>
 </div>
 
-<sc-if value="{{isSocial}}" hint-placeholder-val="{{false}}">
+<sc-if value="{{isSocial}}" hint-placeholder-val="{{true}}">
 <div style="padding: 0 24px; display: flex; flex-direction: column; gap: 24px">
 <a class="m-tile b11-x" href="agaru.html" aria-label="Agaru Sports, Lost in the Landscape social media campaign" style="width: 342px; height: 458px">
 <img class="w-img" src="../assets/img/agaru-motion-climb.jpg" alt="" style="object-position: 45% 58%">
@@ -240,7 +239,7 @@ a:hover{color:#6E8090}
 </div>
 </sc-if>
 
-<sc-if value="{{isWeb}}" hint-placeholder-val="{{true}}">
+<sc-if value="{{isWeb}}" hint-placeholder-val="{{false}}">
 <div style="padding: 0 24px; display: flex; flex-direction: column; gap: 22px">
 <a class="m-tile b11-x" href="index.html" aria-label="By Eleven Creative, our own website" style="width: 342px; height: 400px">
 <img class="w-img" src="../assets/img/9da1bcc1198d7eb30a3025432aed3e0a.jpg" alt="" style="object-position: 50% 45%">
@@ -305,7 +304,7 @@ a:hover{color:#6E8090}
 class Component extends DCLogic {
 constructor(props) {
 super(props);
-this.state = { cat: 'web', menu: false };
+this.state = { cat: 'social', menu: false };
 this.pickBrand = () => this.setState({ cat: 'brand' });
 this.pickSocial = () => this.setState({ cat: 'social' });
 this.pickWeb = () => this.setState({ cat: 'web' });
