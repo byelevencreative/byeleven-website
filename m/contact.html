@@ -242,6 +242,7 @@ a:hover{color:#6E8090}
 <h1 class="b11-rise b11-d1" style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 44px; line-height: 1.05; color: #402615">Write to the house</h1>
 <form onSubmit="{{send}}" aria-label="Write to Hollie and Juls" style="display: flex; flex-direction: column; gap: 36px">
 <div class="n-letter">
+<div class="b11-rise b11-d2" aria-hidden="true" style="display: flex; align-items: center; gap: 22px; margin-bottom: 30px"><span style="display: flex; flex-direction: column; align-items: flex-start; gap: 6px; line-height: 1"><span style="font-family: 'Cormorant Garamond', serif; font-size: 11px; font-weight: 500; letter-spacing: 11px; color: #7D5E3C">BY</span><span style="font-family: 'Cormorant Garamond', serif; font-size: 26px; font-weight: 400; letter-spacing: 11px; color: #402615">ELEVEN</span></span><span style="flex-grow: 1; height: 1px; background: #D6C8B1"></span></div>
 <p class="b11-rise b11-d2" style="margin: 0 0 18px; font-style: italic; color: #7D5E3C">Dear Hollie &amp; Juls,</p>
 <p class="b11-rise b11-d3" style="margin: 0">My name is <label style="white-space: nowrap"><span style="position: absolute; width: 1px; height: 1px; overflow: clip">Your name</span><input class="n-in" type="text" name="name" autocomplete="name" placeholder="your name" onInput="{{setName}}" style="width: 180px">,</label> and I am writing on behalf of <label style="white-space: nowrap"><span style="position: absolute; width: 1px; height: 1px; overflow: clip">Brand or company</span><input class="n-in" type="text" name="brand" autocomplete="organization" placeholder="my brand" onInput="{{setBrand}}" style="width: 190px">.</label></p>
 <p class="b11-rise b11-d4" style="margin: 0">I would love to talk about <span role="group" aria-label="Choose one or more"><span style="white-space: nowrap"><button type="button" class="{{c1}}" aria-pressed="{{p1}}" onClick="{{t1}}">social media</button>,</span> <span style="white-space: nowrap"><button type="button" class="{{c2}}" aria-pressed="{{p2}}" onClick="{{t2}}">a website</button>,</span> <button type="button" class="{{c3}}" aria-pressed="{{p3}}" onClick="{{t3}}">a film</button> or <span style="white-space: nowrap"><button type="button" class="{{c4}}" aria-pressed="{{p4}}" onClick="{{t4}}">something new</button>.</span></span></p>
@@ -293,7 +294,7 @@ a:hover{color:#6E8090}
 
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":2515}}'>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":2588}}'>
 class Component extends DCLogic {
 constructor(props) {
 super(props);
