@@ -157,9 +157,9 @@ a:hover{color:#6E8090}
 .el-zoom{animation:el-zoom linear both;animation-timeline:view();animation-range:entry 0% exit 35%}
 }
 @media (prefers-reduced-motion:reduce){.e-eleven,.el-zoom,.el-drift,.m-svc{animation:none!important}}
+@keyframes el-soft{from{opacity:0;transform:translateY(18px);filter:blur(7px)}to{opacity:1;transform:none;filter:blur(0)}}
 @supports (animation-timeline: view()){
-.b11-rv .e-svc.b11-x:nth-child(odd){animation-name:el-sl-l}
-.b11-rv .e-svc.b11-x:nth-child(even){animation-name:el-sl-r}
+.b11-rv .e-svc.b11-x{animation:el-soft linear both;animation-timeline:view();animation-range:entry 20% cover 38%}
 }
 .el-drift-wrap{animation:el-drift 22s ease-in-out infinite alternate}
 </style>
