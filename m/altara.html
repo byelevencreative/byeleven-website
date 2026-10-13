@@ -189,7 +189,7 @@ a:hover{color:#6E8090}
 .m-act p{margin:0;font-size:14px;line-height:1.9;font-weight:300;color:#5E4A38}
 </style>
 </helmet>
-<div style="position: relative; width: 390px; height: 3394px; display: flex; flex-direction: column; background: #EEE7DC; overflow: clip">
+<div style="position: relative; width: 390px; display: flex; flex-direction: column; background: #EEE7DC; overflow: clip">
 <sc-if value="{{menuOpen}}">
 <div class="m-sheet" role="dialog" aria-label="Menu">
 <div style="display: flex; justify-content: space-between; align-items: center; min-height: 52px">
@@ -223,7 +223,7 @@ a:hover{color:#6E8090}
 <img class="b11-rise b11-d1" src="../assets/img/71d6b85cc3d04d7eeda9ba1b6b9fc8ea.png" alt="Altara Privé" style="display: block; width: 150px; height: auto">
 <h1 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 44px; line-height: 1.04; color: #402615"><span class="b11-rise b11-d2">Bringing luxury</span><span class="b11-rise b11-d3"><em style="font-style: italic; color: #60323B">down to earth.</em></span></h1>
 </div>
-<div style="position: relative; width: 390px; height: 250px; overflow: clip"><img class="b11-emerge" src="../assets/img/8d21302405b55cac2369bb53ffd7f3e6.jpg" alt="A private jet with its stairs down and a black sports car waiting on the runway, in black and white" style="position: absolute; left: -150px; top: -175px; width: 700px; height: auto; display: block"></div>
+<div style="position: relative; width: 390px;  overflow: clip"><img class="b11-emerge" src="../assets/img/8d21302405b55cac2369bb53ffd7f3e6.jpg" alt="A private jet with its stairs down and a black sports car waiting on the runway, in black and white" style="position: absolute; left: -150px; top: -175px; width: 700px; height: auto; display: block"></div>
 </section>
 
 <section class="b11-rv" style="background: #F8F8F8; padding: 40px 28px 56px; display: flex; flex-direction: column; align-items: center; gap: 32px; text-align: center">
@@ -285,7 +285,7 @@ a:hover{color:#6E8090}
 
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":3394}}'>
+<script type="text/x-dc" data-dc-script data-props='{"$preview":{"width":390,"height":3395}}'>
 class Component extends DCLogic {
 constructor(props) { super(props); this.state = { menu: false }; this.toggleMenu = () => this.setState({ menu: !this.state.menu }); }
 renderVals() { return { toggleMenu: this.toggleMenu, menuOpen: this.state.menu, menuExpanded: this.state.menu ? 'true' : 'false' }; }

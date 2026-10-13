@@ -181,7 +181,7 @@ a:hover{color:#6E8090}
 @media (prefers-reduced-motion:reduce){.sig-wait .sig path{stroke-dashoffset:0;fill-opacity:1}.sig-on .sig path{animation:none!important}}
 </style>
 </helmet>
-<div style="width: 1440px; height: 3570px; display: flex; flex-direction: column; background: #EEE7DC; overflow: clip">
+<div style="width: 1440px; display: flex; flex-direction: column; background: #EEE7DC; overflow: clip">
 
 
 
@@ -266,7 +266,7 @@ a:hover{color:#6E8090}
 
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props='{"blue":{"editor":"color","default":"#9EABB7"},"$preview":{"width":1440,"height":3570}}'>
+<script type="text/x-dc" data-dc-script data-props='{"blue":{"editor":"color","default":"#9EABB7"},"$preview":{"width":1440,"height":3562}}'>
 class Component extends DCLogic {
 constructor(props) { super(props); this.state = { sig: false }; this.sigRef = (el) => { if (!el || this.sigEl === el) return; this.sigEl = el; const go = () => { if (!this.state.sig) this.setState({ sig: true }); }; if (typeof IntersectionObserver === 'undefined') { go(); return; } const io = new IntersectionObserver((es) => { es.forEach((e) => { if (e.isIntersecting) { go(); io.disconnect(); } }); }, { threshold: 0.6 }); io.observe(el); }; }
 renderVals() {
