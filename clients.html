@@ -190,7 +190,7 @@ a:hover{color:#6E8090}
 <span class="b11-x" style="font-size: 11px; letter-spacing: 7px; color: #6E8090">IN THEIR WORDS</span>
 <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 54px; letter-spacing: 6px; color: #402615"><span class="b11-mask"><span>PEOPLE WORKING <em style="font-style: italic; letter-spacing: 0; color: #6E8090">with</em> PEOPLE</span></span></h2>
 </div>
-<div style="min-height: 440px; overflow: clip">
+<div style="min-height: 590px; overflow: clip; display: flex; flex-direction: column; justify-content: center">
 <sc-if value="{{isT1}}" hint-placeholder-val="{{true}}">
 <div class="t-pane" style="display: grid; grid-template-columns: 420px minmax(0, 1fr); column-gap: 70px; align-items: center">
 <img src="assets/img/a331221eef749256a82657a3de81882e.jpg" alt="Aiden, Manager of Sales at Creative Wrap, in black and white" style="display: block; width: 420px; height: 395px; object-fit: contain">
@@ -203,11 +203,12 @@ a:hover{color:#6E8090}
 </sc-if>
 <sc-if value="{{isT2}}" hint-placeholder-val="{{false}}">
 <div class="t-pane" style="display: grid; grid-template-columns: 420px minmax(0, 1fr); column-gap: 70px; align-items: center">
-<img src="assets/img/4087e401e08ecdbbd7ea80a684faebe2.jpg" alt="Conor, private jet broker at Jet Luxe, in black and white" style="display: block; width: 420px; height: 440px; object-fit: contain">
-<div style="display: flex; flex-direction: column; gap: 30px">
+<img src="assets/img/james-altara.jpg" alt="James, founder of Altara Privé, reading in an armchair, drawn in pencil" style="display: block; width: 420px; height: 396px; object-fit: contain">
+<div style="display: flex; flex-direction: column; gap: 22px">
 <span aria-hidden="true" style="font-family: 'Cormorant Garamond', serif; font-size: 120px; line-height: .5; height: 50px; color: #9EABB7">“</span>
-<p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-style: italic; font-size: 30px; line-height: 1.4; color: #402615">Working with By Eleven transformed our brand. As a luxury private jet company, we needed content that captured both sophistication and emotion. The team nailed our vision with stunning visuals, sharp storytelling and impactful campaigns. Engagement and inquiries have noticeably increased.</p>
-<div style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 12px; font-weight: 500; letter-spacing: 5px; color: #402615">CONOR</span><span style="font-size: 10px; letter-spacing: 4px; color: #6E8090">PRIVATE JET BROKER · JET LUXE · PRIVATE AVIATION</span></div>
+<p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-style: italic; font-size: 21px; line-height: 1.6; color: #402615">When I started out, I had ideas, energy and drive, but I didn't know how to communicate what I was building. By Eleven fixed that. They redesigned and built my website, then filmed, edited and published a steady run of videos on my social channels. They also came up with formats that worked: a monthly CEO catch-up, guides for beginners and an aircraft of the month review. Within a couple of weeks, my followers and engagement were up more than 80%. Before By Eleven, my lead generation was close to nothing. Now the business generates leads and real interest, and I take it from there.</p>
+<p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-style: italic; font-size: 21px; line-height: 1.6; color: #402615">They got involved the way an owner would, down to sending me video concepts at midnight on a Tuesday. Hollie and Juls are now part of how my business runs, and I wouldn't trust my brand to anyone else.</p>
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 12px; font-weight: 500; letter-spacing: 5px; color: #402615">JAMES</span><span style="font-size: 10px; letter-spacing: 4px; color: #6E8090">FOUNDER · ALTARA PRIVÉ</span><a class="c-back" href="https://www.instagram.com/altaraprive/" style="margin-top: 10px; font-size: 10px; letter-spacing: 5px; color: #402615">@ALTARAPRIVE ↗</a></div>
 </div>
 </div>
 </sc-if>
@@ -224,7 +225,7 @@ a:hover{color:#6E8090}
 </div>
 <div role="group" aria-label="Choose a testimonial" style="display: flex; justify-content: center; gap: 56px">
 <button type="button" class="{{t1Cls}}" aria-pressed="{{t1On}}" onClick="{{pickT1}}"><span class="t-n">I</span>AIDEN · CREATIVE WRAP</button>
-<button type="button" class="{{t2Cls}}" aria-pressed="{{t2On}}" onClick="{{pickT2}}"><span class="t-n">II</span>CONOR · JET LUXE</button>
+<button type="button" class="{{t2Cls}}" aria-pressed="{{t2On}}" onClick="{{pickT2}}"><span class="t-n">II</span>JAMES · ALTARA PRIVÉ</button>
 <button type="button" class="{{t3Cls}}" aria-pressed="{{t3On}}" onClick="{{pickT3}}"><span class="t-n">III</span>AURITA &amp; CLARE · NOMADNEST</button>
 </div>
 </section>
@@ -267,13 +268,13 @@ constructor(props) {
 super(props);
 this.state = { t: 1 };
 this.order = [1, 2];
-this.restart = () => { clearInterval(this.timer); this.timer = setInterval(() => { const o = this.order; const i = o.indexOf(this.state.t); this.setState({ t: o[(i + 1) % o.length] }); }, 7000); };
-this.pickT1 = () => { this.setState({ t: 1 }); this.restart(); };
-this.pickT2 = () => { this.setState({ t: 2 }); this.restart(); };
-this.pickT3 = () => { this.setState({ t: 3 }); this.restart(); };
+this.restart = (cur) => { clearTimeout(this.timer); const t = cur || this.state.t; const d = t === 2 ? 24000 : 9000; this.timer = setTimeout(() => { const o = this.order; const n = o[(o.indexOf(t) + 1) % o.length]; this.setState({ t: n }); this.restart(n); }, d); };
+this.pickT1 = () => { this.setState({ t: 1 }); this.restart(1); };
+this.pickT2 = () => { this.setState({ t: 2 }); this.restart(2); };
+this.pickT3 = () => { this.setState({ t: 3 }); this.restart(3); };
 }
 componentDidMount() { this.restart(); }
-componentWillUnmount() { clearInterval(this.timer); }
+componentWillUnmount() { clearTimeout(this.timer); }
 renderVals() {
 const t = this.state.t;
 const c = (n) => (t === n ? 't-btn t-on' : 't-btn');

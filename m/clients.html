@@ -228,7 +228,7 @@ a:hover{color:#6E8090}
 <span class="b11-x" style="font-size: 10px; letter-spacing: 6px; color: #6E8090">IN THEIR WORDS</span>
 <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 28px; line-height: 1.2; letter-spacing: 5px; color: #402615"><span class="b11-mask"><span>PEOPLE WORKING<br><em style="font-style: italic; letter-spacing: 0; font-size: 32px; color: #6E8090">with</em> PEOPLE</span></span></h2>
 </div>
-<div style="min-height: 560px; width: 100%">
+<div style="min-height: 870px; width: 100%; display: flex; flex-direction: column; justify-content: center">
 <sc-if value="{{isT1}}" hint-placeholder-val="{{true}}">
 <div class="t-pane" style="display: flex; flex-direction: column; align-items: center; gap: 18px; text-align: center">
 <img src="../assets/img/a331221eef749256a82657a3de81882e.jpg" alt="Aiden, Manager of Sales at Creative Wrap, in black and white" style="display: block; width: 200px; height: 236px; object-fit: cover">
@@ -239,10 +239,11 @@ a:hover{color:#6E8090}
 </sc-if>
 <sc-if value="{{isT2}}" hint-placeholder-val="{{false}}">
 <div class="t-pane" style="display: flex; flex-direction: column; align-items: center; gap: 18px; text-align: center">
-<img src="../assets/img/4087e401e08ecdbbd7ea80a684faebe2.jpg" alt="Conor, private jet broker at Jet Luxe, in black and white" style="display: block; width: 200px; height: 236px; object-fit: cover">
+<img src="../assets/img/james-altara.jpg" alt="James, founder of Altara Privé, reading in an armchair, drawn in pencil" style="display: block; width: 236px; height: 222px; object-fit: contain">
 <span aria-hidden="true" style="font-family: 'Cormorant Garamond', serif; font-size: 60px; line-height: .4; color: #BEA683; margin-top: 8px">“</span>
-<p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 300; font-size: 18px; line-height: 1.55; color: #402615">Working with By Eleven transformed our brand. As a luxury private jet company, we needed content that captured both sophistication and emotion. The team nailed our vision with stunning visuals, sharp storytelling and impactful campaigns. Engagement and inquiries have noticeably increased.</p>
-<div style="display: flex; flex-direction: column; align-items: center; gap: 6px"><span style="font-size: 11px; letter-spacing: 5px; color: #402615">CONOR</span><span style="font-size: 8px; letter-spacing: 3px; color: #6E8090">PRIVATE JET BROKER · JET LUXE</span></div>
+<p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 300; font-size: 16px; line-height: 1.6; color: #402615">When I started out, I had ideas, energy and drive, but I didn't know how to communicate what I was building. By Eleven fixed that. They redesigned and built my website, then filmed, edited and published a steady run of videos on my social channels. They also came up with formats that worked: a monthly CEO catch-up, guides for beginners and an aircraft of the month review. Within a couple of weeks, my followers and engagement were up more than 80%. Before By Eleven, my lead generation was close to nothing. Now the business generates leads and real interest, and I take it from there.</p>
+<p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 300; font-size: 16px; line-height: 1.6; color: #402615">They got involved the way an owner would, down to sending me video concepts at midnight on a Tuesday. Hollie and Juls are now part of how my business runs, and I wouldn't trust my brand to anyone else.</p>
+<div style="display: flex; flex-direction: column; align-items: center; gap: 6px"><span style="font-size: 11px; letter-spacing: 5px; color: #402615">JAMES</span><span style="font-size: 8px; letter-spacing: 3px; color: #6E8090">FOUNDER · ALTARA PRIVÉ</span><a class="c-back" href="https://www.instagram.com/altaraprive/" style="display: inline-flex; align-items: center; min-height: 36px; font-size: 9px; letter-spacing: 3px; color: #402615">@ALTARAPRIVE ↗</a></div>
 </div>
 </sc-if>
 <sc-if value="{{isT3}}" hint-placeholder-val="{{false}}">
@@ -256,7 +257,7 @@ a:hover{color:#6E8090}
 </div>
 <div role="group" aria-label="Choose a testimonial" style="display: flex; justify-content: center; gap: 30px">
 <button type="button" class="{{t1Cls}}" aria-pressed="{{t1On}}" aria-label="Aiden, Creative Wrap" onClick="{{pickT1}}"><span class="t-n">I</span></button>
-<button type="button" class="{{t2Cls}}" aria-pressed="{{t2On}}" aria-label="Conor, Jet Luxe" onClick="{{pickT2}}"><span class="t-n">II</span></button>
+<button type="button" class="{{t2Cls}}" aria-pressed="{{t2On}}" aria-label="James, Altara Privé" onClick="{{pickT2}}"><span class="t-n">II</span></button>
 <button type="button" class="{{t3Cls}}" aria-pressed="{{t3On}}" aria-label="Aurita and Clare, NomadNest" onClick="{{pickT3}}"><span class="t-n">III</span></button>
 </div>
 </section>
@@ -286,13 +287,13 @@ a:hover{color:#6E8090}
 class Component extends DCLogic {
 constructor(props) { super(props); this.state = { menu: false, t: 1 }; this.toggleMenu = () => this.setState({ menu: !this.state.menu });
 this.order = [1, 2];
-this.restart = () => { clearInterval(this.timer); this.timer = setInterval(() => { const o = this.order; const i = o.indexOf(this.state.t); this.setState({ t: o[(i + 1) % o.length] }); }, 7000); };
-this.pickT1 = () => { this.setState({ t: 1 }); this.restart(); };
-this.pickT2 = () => { this.setState({ t: 2 }); this.restart(); };
-this.pickT3 = () => { this.setState({ t: 3 }); this.restart(); };
+this.restart = (cur) => { clearTimeout(this.timer); const t = cur || this.state.t; const d = t === 2 ? 24000 : 9000; this.timer = setTimeout(() => { const o = this.order; const n = o[(o.indexOf(t) + 1) % o.length]; this.setState({ t: n }); this.restart(n); }, d); };
+this.pickT1 = () => { this.setState({ t: 1 }); this.restart(1); };
+this.pickT2 = () => { this.setState({ t: 2 }); this.restart(2); };
+this.pickT3 = () => { this.setState({ t: 3 }); this.restart(3); };
  }
 componentDidMount() { this.restart(); }
-componentWillUnmount() { clearInterval(this.timer); }
+componentWillUnmount() { clearTimeout(this.timer); }
 renderVals() { return { toggleMenu: this.toggleMenu, menuOpen: this.state.menu, menuExpanded: this.state.menu ? 'true' : 'false', isT1: this.state.t === 1, isT2: this.state.t === 2, isT3: this.state.t === 3, t1Cls: this.state.t === 1 ? 't-btn t-on' : 't-btn', t2Cls: this.state.t === 2 ? 't-btn t-on' : 't-btn', t3Cls: this.state.t === 3 ? 't-btn t-on' : 't-btn', t1On: this.state.t === 1 ? 'true' : 'false', t2On: this.state.t === 2 ? 'true' : 'false', t3On: this.state.t === 3 ? 'true' : 'false', pickT1: this.pickT1, pickT2: this.pickT2, pickT3: this.pickT3 }; }
 }
 </script>
