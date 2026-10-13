@@ -158,24 +158,31 @@ a:hover{color:#6E8090}
 .cl-cell:hover .cl-logo{transform:scale(1.06);opacity:.7}
 @keyframes cl-in{from{opacity:0;transform:translateY(46px);filter:blur(8px)}to{opacity:1;transform:none;filter:blur(0)}}
 @media (prefers-reduced-motion:reduce){.cl-cell{animation:none !important}}
-.k-in{width:100%;box-sizing:border-box;min-height:52px;padding:14px 0;background:transparent;border:0;border-bottom:1px solid #CDBFA9;border-radius:0;color:#402615;font-family:'Jost',sans-serif;font-size:15px;font-weight:300;transition:border-color .5s ease}
-.k-in::placeholder{color:#A8998A}
-.k-in:focus{outline:none;border-bottom-color:#55697A}
-textarea.k-in{min-height:132px;resize:vertical;line-height:1.7}
-.k-lab{font-size:10px;letter-spacing:4px;color:#7D5E3C}
-.k-chip{min-height:44px;padding:0 22px;background:transparent;border:1px solid #CDBFA9;color:#5E4A38;font-family:'Jost',sans-serif;font-size:10px;letter-spacing:4px;cursor:pointer;transition:background-color .5s ease,color .5s ease,border-color .5s ease}
-.k-chip:hover{border-color:#55697A;color:#55697A}
-.k-chip.k-on{background:#55697A;border-color:#55697A;color:#F2ECE2}
-.k-send{min-height:56px;padding:0 44px;white-space:nowrap;flex-shrink:0;background:#402615;border:0;color:#EEE7DC;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:5px;cursor:pointer}
-.k-line{display:flex;justify-content:space-between;align-items:baseline;gap:20px;padding:16px 0;border-bottom:1px solid #DCD0BD}
-@keyframes k-slow{from{transform:scale(1.12)}to{transform:scale(1)}}
-.k-sea{animation:k-slow 24s ease-out both}
-.k-sea{transform-origin:center}
-@media (prefers-reduced-motion:reduce){.k-sea{animation:none}}
+.n-letter{font-family:'Cormorant Garamond',serif;font-weight:300;font-size:30px;line-height:2.05;color:#402615}
+.n-in{display:inline-block;vertical-align:baseline;min-height:44px;padding:0 4px;background:transparent;border:0;border-bottom:1px solid #BEA683;border-radius:0;color:#55697A;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:400;font-size:30px;line-height:1.2;transition:border-color .6s ease}
+.n-in::placeholder{color:#B9AA97;font-style:italic}
+.n-in:focus{outline:none;border-bottom-color:#55697A}
+.n-area{display:block;width:100%;box-sizing:border-box;min-height:118px;margin-top:4px;padding:6px 4px;background:transparent;border:0;border-bottom:1px solid #BEA683;border-radius:0;resize:none;color:#55697A;font-family:'Cormorant Garamond',serif;font-style:italic;font-size:26px;line-height:1.6}
+.n-area::placeholder{color:#B9AA97}
+.n-area:focus{outline:none;border-bottom-color:#55697A}
+.n-pick{display:inline;min-height:44px;padding:0 2px;background:transparent;border:0;border-bottom:1px dotted #BEA683;color:#8C7B69;font-family:'Cormorant Garamond',serif;font-style:italic;font-weight:400;font-size:30px;line-height:1.2;cursor:pointer;transition:color .5s ease,border-color .5s ease}
+.n-pick:hover{color:#55697A}
+.n-pick.n-on{color:#55697A;border-bottom:1px solid #55697A}
+.n-pick:focus-visible,.n-send:focus-visible,.n-in:focus-visible{outline:1px solid #55697A;outline-offset:4px}
+.n-send{display:inline-flex;align-items:center;gap:18px;min-height:56px;padding:0 40px;background:#402615;border:0;color:#EEE7DC;font-family:'Jost',sans-serif;font-size:11px;letter-spacing:5px;cursor:pointer;transition:background-color .6s ease,letter-spacing .8s cubic-bezier(.2,.7,.2,1)}
+.n-send:hover{background:#55697A;letter-spacing:6px}
+.n-sig{font-family:'Mrs Saint Delafield',cursive;font-weight:400;color:#402615;line-height:1}
+@keyframes n-unveil{from{clip-path:inset(100% 0 0 0)}to{clip-path:inset(0 0 0 0)}}
+@keyframes n-settle{from{transform:scale(1.14)}to{transform:scale(1.02)}}
+.n-veil{animation:n-unveil 2.2s cubic-bezier(.7,0,.2,1) .2s both}
+.n-veil img{animation:n-settle 9s cubic-bezier(.2,.7,.2,1) .2s both}
+.n-city{transition:color .6s ease}
+.n-place:hover .n-city{color:#55697A}
+@media (prefers-reduced-motion:reduce){.n-veil,.n-veil img{animation:none}}
 </style>
 </helmet>
 <div style="width: 1440px; display: flex; flex-direction: column; background: #F8F8F8; overflow: clip">
-<section class="b11-rv" style="background: #F8F8F8; padding-bottom: 140px">
+<section class="b11-rv" style="background: #F8F8F8">
 <header style="position: relative; z-index: 2; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: center; padding: 34px 72px">
 <nav aria-label="Primary" style="display: flex; gap: 44px; font-size: 11px; letter-spacing: 4px"><a href="index.html">THE HOUSE</a><a href="the-eleven.html">THE ELEVEN</a><a href="work.html">WORK</a></nav>
 <a href="index.html" aria-label="By Eleven Creative, home" style="justify-self: center; display: flex; flex-direction: column; align-items: center; gap: 7px">
@@ -184,58 +191,45 @@ textarea.k-in{min-height:132px;resize:vertical;line-height:1.7}
 <nav aria-label="Secondary" style="justify-self: end; display: flex; align-items: center; gap: 44px; font-size: 11px; letter-spacing: 4px"><a href="clients.html">CLIENTS</a><a href="contact.html" aria-current="page" style="color: #6E8090; border-bottom: 1px solid #9EABB7; padding-bottom: 4px">CONTACT</a>
 <a href="mailto:hollie@byelevencreative.com?subject=A%20new%20conversation" style="display: flex; align-items: center; min-height: 44px; padding: 0 24px; background: #402615; color: #EEE7DC">BEGIN</a></nav>
 </header>
-<div style="display: flex; flex-direction: column; align-items: center; gap: 22px; padding: 110px 100px 96px; text-align: center">
-<span class="b11-rise b11-d1" style="font-size: 11px; letter-spacing: 7px; color: #6E8090">CONTACT</span>
-<h1 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 66px; line-height: 1.05; letter-spacing: 8px; color: #402615"><span class="b11-rise b11-d2">BEGIN A <em style="font-style: italic; letter-spacing: 0; color: #6E8090">conversation</em></span></h1>
-<p class="b11-rise b11-d4" style="margin: 0; max-width: 600px; font-size: 16px; line-height: 1.9; font-weight: 300; color: #5E4A38">Tell us about your brand, your idea or your next launch, and let's see how far we can take it together.</p>
+<div style="display: grid; grid-template-columns: 600px minmax(0, 1fr); column-gap: 120px; padding: 40px 72px 150px">
+<div class="n-veil" style="position: relative; height: 940px; overflow: clip; background: #D6C8B1">
+<img src="assets/img/stable-hd.jpg" alt="A quiet stable with a timber ceiling, light falling through the skylight onto a stone aisle" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: 70% center">
 </div>
-<div class="b11-rise b11-d5" style="display: grid; grid-template-columns: minmax(0, 1fr) 400px; column-gap: 110px; padding: 0 140px">
-<form onSubmit="{{send}}" style="display: flex; flex-direction: column; gap: 34px; padding: 64px 64px 56px; background: #EEE7DC">
-<div style="display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); column-gap: 36px">
-<label style="display: flex; flex-direction: column; gap: 4px"><span class="k-lab">YOUR NAME</span><input class="k-in" type="text" name="name" autocomplete="name" placeholder="Name and surname" onInput="{{setName}}"></label>
-<label style="display: flex; flex-direction: column; gap: 4px"><span class="k-lab">EMAIL</span><input class="k-in" type="email" name="email" autocomplete="email" placeholder="you@yourbrand.com" onInput="{{setEmail}}"></label>
+<div style="display: flex; flex-direction: column; justify-content: center; gap: 64px; padding-right: 40px">
+<h1 class="b11-rise b11-d1" style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 64px; line-height: 1.05; letter-spacing: 1px; color: #402615">Write to the house</h1>
+<form onSubmit="{{send}}" aria-label="Write to Hollie and Juls" style="display: flex; flex-direction: column; gap: 46px">
+<div class="n-letter">
+<p class="b11-rise b11-d2" style="margin: 0 0 18px; font-style: italic; color: #7D5E3C">Dear Hollie &amp; Juls,</p>
+<p class="b11-rise b11-d3" style="margin: 0">My name is <label style="white-space: nowrap"><span style="position: absolute; width: 1px; height: 1px; overflow: clip">Your name</span><input class="n-in" type="text" name="name" autocomplete="name" placeholder="your name" onInput="{{setName}}" style="width: 250px">,</label> and I am writing on behalf of <label style="white-space: nowrap"><span style="position: absolute; width: 1px; height: 1px; overflow: clip">Brand or company</span><input class="n-in" type="text" name="brand" autocomplete="organization" placeholder="my brand" onInput="{{setBrand}}" style="width: 230px">.</label></p>
+<p class="b11-rise b11-d4" style="margin: 0">I would love to talk about <span role="group" aria-label="Choose one or more"><span style="white-space: nowrap"><button type="button" class="{{c1}}" aria-pressed="{{p1}}" onClick="{{t1}}">social media</button>,</span> <span style="white-space: nowrap"><button type="button" class="{{c2}}" aria-pressed="{{p2}}" onClick="{{t2}}">a website</button>,</span> <button type="button" class="{{c3}}" aria-pressed="{{p3}}" onClick="{{t3}}">a film</button> or <span style="white-space: nowrap"><button type="button" class="{{c4}}" aria-pressed="{{p4}}" onClick="{{t4}}">something new</button>.</span></span></p>
+<label class="b11-rise b11-d4" style="display: block; margin-top: 6px"><span style="position: absolute; width: 1px; height: 1px; overflow: clip">Your message</span><textarea class="n-area" name="message" placeholder="A few words about what you have in mind" onInput="{{setMsg}}"></textarea></label>
+<p class="b11-rise b11-d5" style="margin: 18px 0 0">You can reach me at <label style="white-space: nowrap"><span style="position: absolute; width: 1px; height: 1px; overflow: clip">Your email</span><input class="n-in" type="email" name="email" autocomplete="email" placeholder="your email" onInput="{{setEmail}}" style="width: 262px">.</label></p>
 </div>
-<label style="display: flex; flex-direction: column; gap: 4px"><span class="k-lab">BRAND OR COMPANY</span><input class="k-in" type="text" name="brand" autocomplete="organization" placeholder="Who are we building for?" onInput="{{setBrand}}"></label>
-<div role="group" aria-label="What can we help with?" style="display: flex; flex-direction: column; gap: 14px">
-<span class="k-lab">WHAT CAN WE HELP WITH?</span>
-<div style="display: flex; flex-wrap: wrap; gap: 10px">
-<button type="button" class="{{c1}}" aria-pressed="{{p1}}" onClick="{{t1}}">SOCIAL MEDIA</button>
-<button type="button" class="{{c2}}" aria-pressed="{{p2}}" onClick="{{t2}}">WEB DEVELOPMENT</button>
-<button type="button" class="{{c3}}" aria-pressed="{{p3}}" onClick="{{t3}}">FILM &amp; CONTENT</button>
-<button type="button" class="{{c4}}" aria-pressed="{{p4}}" onClick="{{t4}}">SOMETHING ELSE</button>
-</div>
-</div>
-<label style="display: flex; flex-direction: column; gap: 4px"><span class="k-lab">YOUR MESSAGE</span><textarea class="k-in" name="message" placeholder="A few lines about what you have in mind" onInput="{{setMsg}}"></textarea></label>
-<div style="display: flex; align-items: center; justify-content: space-between; gap: 24px; padding-top: 6px">
-<span style="max-width: 300px; font-size: 12px; line-height: 1.7; font-weight: 300; color: #7D6A58">Sending opens your email with your message ready to go.</span>
-<button type="submit" class="k-send b11-shine">SEND MESSAGE</button>
+<div class="b11-rise b11-d5" style="display: flex; align-items: center; gap: 30px">
+<button type="submit" class="n-send">SEND THE NOTE</button>
+<span style="font-size: 12px; line-height: 1.7; font-weight: 300; color: #8C7B69">Opens your email with the note ready to send.</span>
 </div>
 </form>
-<div style="display: flex; flex-direction: column; gap: 54px; padding-top: 18px">
-<div style="display: flex; flex-direction: column; gap: 6px">
-<span style="font-size: 10px; letter-spacing: 5px; color: #6E8090">WRITE TO US</span>
-<a class="k-line" href="mailto:hollie@byelevencreative.com"><span style="font-family: 'Cormorant Garamond', serif; font-size: 24px">Hollie</span><span style="font-size: 13px; font-weight: 300">hollie@byelevencreative.com</span></a>
-<a class="k-line" href="mailto:info@byelevencreative.com"><span style="font-family: 'Cormorant Garamond', serif; font-size: 24px">The house</span><span style="font-size: 13px; font-weight: 300">info@byelevencreative.com</span></a>
-</div>
-<div style="display: flex; flex-direction: column; gap: 6px">
-<span style="font-size: 10px; letter-spacing: 5px; color: #6E8090">CALL OR WHATSAPP</span>
-<a class="k-line" href="tel:+971501603791"><span style="font-family: 'Cormorant Garamond', serif; font-size: 24px; letter-spacing: 3px">DUBAI</span><span style="font-size: 13px; font-weight: 300">+971 50 160 37 91</span></a>
-<a class="k-line" href="tel:+447591914359"><span style="font-family: 'Cormorant Garamond', serif; font-size: 24px; letter-spacing: 3px">UNITED KINGDOM</span><span style="font-size: 13px; font-weight: 300">+44 7591 914359</span></a>
-<a class="k-line" href="tel:+34647561582"><span style="font-family: 'Cormorant Garamond', serif; font-size: 24px; letter-spacing: 3px">SPAIN</span><span style="font-size: 13px; font-weight: 300">+34 647 561 582</span></a>
-</div>
-<div style="display: flex; flex-direction: column; gap: 18px">
-<span style="font-size: 10px; letter-spacing: 5px; color: #6E8090">FOLLOW THE HOUSE</span>
-<div style="display: flex; gap: 34px; font-size: 11px; letter-spacing: 4px"><a class="b11-ul" href="https://www.instagram.com/byelevencreative/">INSTAGRAM</a><a class="b11-ul" href="https://www.linkedin.com/company/by-eleven-creative/">LINKEDIN</a></div>
-</div>
 </div>
 </div>
 </section>
-<section class="b11-rv" style="position: relative; height: 640px; overflow: clip; background: #9EABB7">
-<video class="k-sea" src="assets/founders.mp4" poster="assets/img/c8c989ddaee8e37b11b8d8070e62ff85.jpg" autoplay="" muted="" loop="" playsinline="" aria-label="Hollie and Juls riding side by side through calm sea" style="position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; object-position: center 52%"></video>
-<span aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(64,38,21,0) 40%, rgba(64,38,21,.35) 100%)"></span>
-<div class="b11-x" style="position: absolute; left: 0; right: 0; bottom: 70px; display: flex; flex-direction: column; align-items: center; gap: 14px; text-align: center; color: #F8F8F8">
-<span style="font-size: 10px; letter-spacing: 6px">DUBAI · UNITED KINGDOM · SPAIN</span>
-<span style="font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 48px; letter-spacing: 5px">FURTHER THAN <em style="font-style: italic; letter-spacing: 0">you could</em> GO ALONE</span>
+<section class="b11-rv" style="background: #EEE7DC; padding: 120px 72px 110px; display: grid; grid-template-columns: 600px minmax(0, 1fr); column-gap: 120px; align-items: start">
+<div class="b11-x" style="display: flex; flex-direction: column; gap: 26px">
+<p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 34px; line-height: 1.35; color: #402615">Your note comes straight to the two of us, and we answer it ourselves.</p>
+<span class="n-sig" style="font-size: 64px">Hollie &amp; Juls</span>
+</div>
+<div class="b11-x" style="display: flex; flex-direction: column; gap: 40px; padding-top: 8px">
+<div style="display: flex; flex-direction: column; border-top: 1px solid #D6C8B1">
+<a class="n-place" href="tel:+971501603791" style="display: flex; justify-content: space-between; align-items: baseline; gap: 20px; padding: 22px 0; border-bottom: 1px solid #D6C8B1"><span class="n-city" style="font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 36px; line-height: 1.1; color: #402615">Dubai</span><span style="font-size: 13px; letter-spacing: 2px; font-weight: 300; color: #7D5E3C; white-space: nowrap">+971 50 160 37 91</span></a>
+<a class="n-place" href="tel:+447591914359" style="display: flex; justify-content: space-between; align-items: baseline; gap: 20px; padding: 22px 0; border-bottom: 1px solid #D6C8B1"><span class="n-city" style="font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 36px; line-height: 1.1; color: #402615">United Kingdom</span><span style="font-size: 13px; letter-spacing: 2px; font-weight: 300; color: #7D5E3C; white-space: nowrap">+44 7591 914359</span></a>
+<a class="n-place" href="tel:+34647561582" style="display: flex; justify-content: space-between; align-items: baseline; gap: 20px; padding: 22px 0; border-bottom: 1px solid #D6C8B1"><span class="n-city" style="font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 36px; line-height: 1.1; color: #402615">Spain</span><span style="font-size: 13px; letter-spacing: 2px; font-weight: 300; color: #7D5E3C; white-space: nowrap">+34 647 561 582</span></a>
+</div>
+<div style="display: flex; flex-wrap: wrap; column-gap: 40px; row-gap: 12px; font-size: 14px; font-weight: 300">
+<a class="b11-ul" href="mailto:hollie@byelevencreative.com">hollie@byelevencreative.com</a>
+<a class="b11-ul" href="mailto:info@byelevencreative.com">info@byelevencreative.com</a>
+<a class="b11-ul" href="https://www.instagram.com/byelevencreative/">Instagram</a>
+<a class="b11-ul" href="https://www.linkedin.com/company/by-eleven-creative/">LinkedIn</a>
+</div>
 </div>
 </section>
 
@@ -272,7 +266,7 @@ textarea.k-in{min-height:132px;resize:vertical;line-height:1.7}
 </footer>
 </div>
 </x-dc>
-<script type="text/x-dc" data-dc-script data-props='{"blue":{"editor":"color","default":"#9EABB7"},"$preview":{"width":1440,"height":2465}}'>
+<script type="text/x-dc" data-dc-script data-props='{"blue":{"editor":"color","default":"#9EABB7"},"$preview":{"width":1440,"height":2233}}'>
 class Component extends DCLogic {
 constructor(props) {
 super(props);
@@ -286,16 +280,16 @@ this.tog = (k) => () => this.setState({ s: Object.assign({}, this.state.s, { [k]
 this.t1 = this.tog('social'); this.t2 = this.tog('web'); this.t3 = this.tog('film'); this.t4 = this.tog('other');
 this.send = (e) => {
 e.preventDefault();
-const s = this.state.s; const names = { social: 'Social media', web: 'Web development', film: 'Film & content', other: 'Something else' };
+const s = this.state.s; const names = { social: 'Social media', web: 'A website', film: 'A film', other: 'Something new' };
 const picked = Object.keys(names).filter((k) => s[k]).map((k) => names[k]).join(', ');
 const f = this.f;
-const body = 'Name: ' + f.name + '\nEmail: ' + f.email + '\nBrand: ' + f.brand + '\nInterested in: ' + (picked || '-') + '\n\n' + f.msg;
-const subject = 'A new conversation' + (f.brand ? ' · ' + f.brand : '');
+const body = 'Dear Hollie & Juls,\n\nMy name is ' + (f.name || '') + (f.brand ? ', and I am writing on behalf of ' + f.brand : '') + '.' + (picked ? '\nI would love to talk about: ' + picked + '.' : '') + (f.msg ? '\n\n' + f.msg : '') + '\n\nYou can reach me at ' + (f.email || '') + '.';
+const subject = 'A note for the house' + (f.brand ? ', from ' + f.brand : '');
 window.location.href = 'mailto:hollie@byelevencreative.com?cc=info@byelevencreative.com&subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
 };
 }
 renderVals() {
-const s = this.state.s; const c = (k) => (s[k] ? 'k-chip k-on' : 'k-chip'); const p = (k) => (s[k] ? 'true' : 'false');
+const s = this.state.s; const c = (k) => (s[k] ? 'n-pick n-on' : 'n-pick'); const p = (k) => (s[k] ? 'true' : 'false');
 return { blue: this.props.blue ?? '#9EABB7', send: this.send, setName: this.setName, setEmail: this.setEmail, setBrand: this.setBrand, setMsg: this.setMsg, t1: this.t1, t2: this.t2, t3: this.t3, t4: this.t4, c1: c('social'), c2: c('web'), c3: c('film'), c4: c('other'), p1: p('social'), p2: p('web'), p3: p('film'), p4: p('other') };
 }
 }
