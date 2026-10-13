@@ -70,7 +70,7 @@ a:hover{color:#6E8090}
 @keyframes b11-unveil{from{transform:translateY(110%)}to{transform:none}}
 @keyframes b11-xi-in{from{opacity:0;filter:blur(24px)}to{opacity:1;filter:blur(0)}}
 @keyframes b11-drop{from{transform:scaleY(0)}to{transform:scaleY(1)}}
-.b11-mask{display:block;overflow:hidden;padding-bottom:.08em}
+.b11-mask{display:block;overflow:clip;padding-bottom:.08em}
 .b11-mask>span{display:block}
 .b11-rule{position:absolute;left:0;top:0;height:2px;width:100%;transform-origin:left center;transition:background-color .8s ease}
 .b11-drop{transform-origin:top center}
@@ -82,7 +82,7 @@ a:hover{color:#6E8090}
 .b11-xi{animation:b11-float 14s ease-in-out infinite alternate}
 .b11-glow{position:absolute;width:900px;height:900px;border-radius:50%;background:radial-gradient(circle,rgba(242,236,226,.16) 0%,rgba(242,236,226,0) 65%);pointer-events:none;animation:b11-glow 22s ease-in-out infinite alternate}
 @keyframes b11-glow{0%{transform:translate(-30%,-10%)}50%{transform:translate(60%,20%)}100%{transform:translate(120%,-15%)}}
-.b11-shine{position:relative;overflow:hidden;transition:letter-spacing .8s cubic-bezier(.2,.7,.2,1),background-color .6s ease,color .6s ease}
+.b11-shine{position:relative;overflow:clip;transition:letter-spacing .8s cubic-bezier(.2,.7,.2,1),background-color .6s ease,color .6s ease}
 .b11-shine::after{content:"";position:absolute;top:0;bottom:0;left:-60%;width:40%;background:linear-gradient(100deg,rgba(255,255,255,0) 0%,rgba(255,255,255,.55) 50%,rgba(255,255,255,0) 100%);transform:skewX(-20deg);animation:b11-sheen 5s ease-in-out 2.5s infinite}
 @keyframes b11-sheen{0%{left:-60%}35%,100%{left:130%}}
 .b11-shine:hover{letter-spacing:8px !important;background-color:#EEE7DC !important;color:#402615 !important}
@@ -135,7 +135,7 @@ a:hover{color:#6E8090}
 @media (prefers-reduced-motion:reduce){.e-pillar,.e-gatelight,.e-bar,.e-track{animation:none}.e-pane{transition:none}}
 
 /* ===== CLIENTS page ===== */
-.cl-row{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 12%,#000 88%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0%,#000 12%,#000 88%,transparent 100%)}
+.cl-row{overflow:clip;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 12%,#000 88%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0%,#000 12%,#000 88%,transparent 100%)}
 .cl-track{display:flex;width:max-content;animation:cl-move 55s linear infinite}
 .cl-track.cl-rev{animation-direction:reverse;animation-duration:62s}
 .cl-row:hover .cl-track{animation-play-state:paused}
@@ -190,7 +190,7 @@ a:hover{color:#6E8090}
 <span class="b11-x" style="font-size: 11px; letter-spacing: 7px; color: #6E8090">IN THEIR WORDS</span>
 <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 54px; letter-spacing: 6px; color: #402615"><span class="b11-mask"><span>PEOPLE WORKING <em style="font-style: italic; letter-spacing: 0; color: #6E8090">with</em> PEOPLE</span></span></h2>
 </div>
-<div style="min-height: 440px; overflow: hidden">
+<div style="min-height: 440px; overflow: clip">
 <sc-if value="{{isT1}}" hint-placeholder-val="{{true}}">
 <div class="t-pane" style="display: grid; grid-template-columns: 420px minmax(0, 1fr); column-gap: 70px; align-items: center">
 <img src="assets/img/a331221eef749256a82657a3de81882e.jpg" alt="Aiden, Manager of Sales at Creative Wrap, in black and white" style="display: block; width: 420px; height: 395px; object-fit: contain">
@@ -247,7 +247,7 @@ a:hover{color:#6E8090}
 <span style="font-size: 10px; letter-spacing: 5px; color: #9EABB7">THE BY ELEVEN LETTER</span>
 <p style="margin: 0; font-size: 14px; line-height: 1.7; font-weight: 300; color: #D6C8B1">Rare, considered notes from the house. Never more than once a season.</p>
 <form class="b11-field" style="display: flex; align-items: center; border-bottom: 1px solid #F2ECE2; transition: border-color .5s ease">
-<label for="letter" style="position: absolute; width: 1px; height: 1px; overflow: hidden">Email address</label>
+<label for="letter" style="position: absolute; width: 1px; height: 1px; overflow: clip">Email address</label>
 <input id="letter" type="email" placeholder="Your email address" style="flex-grow: 1; min-height: 48px; background: transparent; border: 0; color: #F2ECE2; font-family: 'Jost', sans-serif; font-size: 14px">
 <button type="submit" style="min-height: 48px; padding: 0 0 0 16px; background: transparent; border: 0; color: #BEA683; font-family: 'Jost', sans-serif; font-size: 11px; letter-spacing: 4px; cursor: pointer">SUBSCRIBE</button>
 </form>

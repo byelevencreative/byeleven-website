@@ -70,7 +70,7 @@ a:hover{color:#6E8090}
 @keyframes b11-unveil{from{transform:translateY(110%)}to{transform:none}}
 @keyframes b11-xi-in{from{opacity:0;filter:blur(24px)}to{opacity:1;filter:blur(0)}}
 @keyframes b11-drop{from{transform:scaleY(0)}to{transform:scaleY(1)}}
-.b11-mask{display:block;overflow:hidden;padding-bottom:.08em}
+.b11-mask{display:block;overflow:clip;padding-bottom:.08em}
 .b11-mask>span{display:block}
 .b11-rule{position:absolute;left:0;top:0;height:2px;width:100%;transform-origin:left center;transition:background-color .8s ease}
 .b11-drop{transform-origin:top center}
@@ -85,7 +85,7 @@ a:hover{color:#6E8090}
 @media (prefers-reduced-motion:reduce){.al-mono{animation:none}}
 .b11-glow{position:absolute;width:900px;height:900px;border-radius:50%;background:radial-gradient(circle,rgba(242,236,226,.16) 0%,rgba(242,236,226,0) 65%);pointer-events:none;animation:b11-glow 22s ease-in-out infinite alternate}
 @keyframes b11-glow{0%{transform:translate(-30%,-10%)}50%{transform:translate(60%,20%)}100%{transform:translate(120%,-15%)}}
-.b11-shine{position:relative;overflow:hidden;transition:letter-spacing .8s cubic-bezier(.2,.7,.2,1),background-color .6s ease,color .6s ease}
+.b11-shine{position:relative;overflow:clip;transition:letter-spacing .8s cubic-bezier(.2,.7,.2,1),background-color .6s ease,color .6s ease}
 .b11-shine::after{content:"";position:absolute;top:0;bottom:0;left:-60%;width:40%;background:linear-gradient(100deg,rgba(255,255,255,0) 0%,rgba(255,255,255,.55) 50%,rgba(255,255,255,0) 100%);transform:skewX(-20deg);animation:b11-sheen 5s ease-in-out 2.5s infinite}
 @keyframes b11-sheen{0%{left:-60%}35%,100%{left:130%}}
 .b11-shine:hover{letter-spacing:8px !important;background-color:#EEE7DC !important;color:#402615 !important}
@@ -146,7 +146,7 @@ a:hover{color:#6E8090}
 .w-grid{animation:b11-rise 1.1s cubic-bezier(.2,.7,.2,1) both}
 @media (prefers-reduced-motion:reduce){.w-l,.w-grid{animation:none}}
 
-.w-tile{position:relative;display:block;overflow:hidden;color:#F2ECE2}
+.w-tile{position:relative;display:block;overflow:clip;color:#F2ECE2}
 .w-img{position:absolute;inset:0;transition:transform 1.6s cubic-bezier(.2,.7,.2,1)}
 .w-tile:hover .w-img{transform:scale(1.04)}
 .w-shade{position:absolute;left:0;right:0;bottom:0;height:45%;background:linear-gradient(180deg,rgba(30,22,16,0) 0%,rgba(30,22,16,.42) 100%);pointer-events:none}
@@ -158,7 +158,7 @@ a:hover{color:#6E8090}
 /* ===== CASE: AGARU ===== */
 .c-sw{display:flex;flex-direction:column;gap:10px;align-items:flex-start}
 .c-dot{width:46px;height:46px;border-radius:50%}
-.c-frame{position:relative;overflow:hidden}
+.c-frame{position:relative;overflow:clip}
 .c-frame img{transition:transform 1.6s cubic-bezier(.2,.7,.2,1)}
 .c-frame:hover img{transform:scale(1.04)}
 .c-back{transition:color .5s ease,letter-spacing .8s cubic-bezier(.2,.7,.2,1)}
@@ -189,7 +189,7 @@ a:hover{color:#6E8090}
 .m-act p{margin:0;font-size:14px;line-height:1.9;font-weight:300;color:#5E4A38}
 </style>
 </helmet>
-<div style="position: relative; width: 390px; height: 3394px; display: flex; flex-direction: column; background: #EEE7DC; overflow: hidden">
+<div style="position: relative; width: 390px; height: 3394px; display: flex; flex-direction: column; background: #EEE7DC; overflow: clip">
 <sc-if value="{{menuOpen}}">
 <div class="m-sheet" role="dialog" aria-label="Menu">
 <div style="display: flex; justify-content: space-between; align-items: center; min-height: 52px">
@@ -223,7 +223,7 @@ a:hover{color:#6E8090}
 <img class="b11-rise b11-d1" src="../assets/img/71d6b85cc3d04d7eeda9ba1b6b9fc8ea.png" alt="Altara Privé" style="display: block; width: 150px; height: auto">
 <h1 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 44px; line-height: 1.04; color: #402615"><span class="b11-rise b11-d2">Bringing luxury</span><span class="b11-rise b11-d3"><em style="font-style: italic; color: #60323B">down to earth.</em></span></h1>
 </div>
-<div style="position: relative; width: 390px; height: 250px; overflow: hidden"><img class="b11-emerge" src="../assets/img/8d21302405b55cac2369bb53ffd7f3e6.jpg" alt="A private jet with its stairs down and a black sports car waiting on the runway, in black and white" style="position: absolute; left: -150px; top: -175px; width: 700px; height: auto; display: block"></div>
+<div style="position: relative; width: 390px; height: 250px; overflow: clip"><img class="b11-emerge" src="../assets/img/8d21302405b55cac2369bb53ffd7f3e6.jpg" alt="A private jet with its stairs down and a black sports car waiting on the runway, in black and white" style="position: absolute; left: -150px; top: -175px; width: 700px; height: auto; display: block"></div>
 </section>
 
 <section class="b11-rv" style="background: #F8F8F8; padding: 40px 28px 56px; display: flex; flex-direction: column; align-items: center; gap: 32px; text-align: center">
@@ -244,7 +244,7 @@ a:hover{color:#6E8090}
 </section>
 
 <section class="b11-rv" style="background: #F8F8F8; padding: 0 0 64px; display: flex; flex-direction: column; align-items: center; gap: 4px; text-align: center">
-<div class="b11-x" style="position: relative; width: 390px; height: 534px; overflow: hidden"><img src="../assets/img/f0f7e5a019f71a4e9e7ecf60b32fd0c7.jpg" alt="The open door of a private jet, its stairs lit and laid with a red carpet" style="position: absolute; left: -25px; top: -48px; width: 440px; height: auto; display: block"></div>
+<div class="b11-x" style="position: relative; width: 390px; height: 534px; overflow: clip"><img src="../assets/img/f0f7e5a019f71a4e9e7ecf60b32fd0c7.jpg" alt="The open door of a private jet, its stairs lit and laid with a red carpet" style="position: absolute; left: -25px; top: -48px; width: 440px; height: auto; display: block"></div>
 <p style="margin: 0; padding: 0 28px; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 38px; line-height: 1.1; color: #402615"><span class="b11-mask"><span>Less velvet rope.</span></span><span class="b11-mask"><span><em style="color: #60323B">More open door.</em></span></span></p>
 <p class="b11-x b11-t4" style="margin: 14px 0 0; padding: 0 34px; font-size: 14px; line-height: 1.95; font-weight: 300; color: #5E4A38">The standard stays exactly where it was. The door is simply open now, with someone there to explain what waits inside.</p>
 </section>
@@ -273,7 +273,7 @@ a:hover{color:#6E8090}
 <div style="display: flex; gap: 26px; font-size: 10px; letter-spacing: 3px; color: #BEA683"><a href="tel:+971501603791" style="min-height: 36px; display: flex; align-items: center">CALL UAE</a><a href="tel:+447591914359" style="min-height: 36px; display: flex; align-items: center">UK</a><a href="tel:+34647561582" style="min-height: 36px; display: flex; align-items: center">ES</a></div>
 </div>
 <form class="b11-field b11-x b11-t4" style="display: flex; align-items: center; width: 100%; border-bottom: 1px solid #F2ECE2">
-<label for="letter-m" style="position: absolute; width: 1px; height: 1px; overflow: hidden">Email address for the By Eleven letter</label>
+<label for="letter-m" style="position: absolute; width: 1px; height: 1px; overflow: clip">Email address for the By Eleven letter</label>
 <input id="letter-m" type="email" placeholder="Join the By Eleven letter" style="flex-grow: 1; min-width: 0; min-height: 46px; background: transparent; border: 0; color: #F2ECE2; font-family: 'Jost', sans-serif; font-size: 16px">
 <button type="submit" style="min-height: 46px; padding: 0 0 0 12px; background: transparent; border: 0; color: #BEA683; font-family: 'Jost', sans-serif; font-size: 10px; letter-spacing: 3px; cursor: pointer">SUBSCRIBE</button>
 </form>

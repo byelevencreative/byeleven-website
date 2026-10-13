@@ -70,7 +70,7 @@ a:hover{color:#6E8090}
 @keyframes b11-unveil{from{transform:translateY(110%)}to{transform:none}}
 @keyframes b11-xi-in{from{opacity:0;filter:blur(24px)}to{opacity:1;filter:blur(0)}}
 @keyframes b11-drop{from{transform:scaleY(0)}to{transform:scaleY(1)}}
-.b11-mask{display:block;overflow:hidden;padding-bottom:.08em}
+.b11-mask{display:block;overflow:clip;padding-bottom:.08em}
 .b11-mask>span{display:block}
 .b11-rule{position:absolute;left:0;top:0;height:2px;width:100%;transform-origin:left center;transition:background-color .8s ease}
 .b11-drop{transform-origin:top center}
@@ -82,7 +82,7 @@ a:hover{color:#6E8090}
 .b11-xi{animation:b11-float 14s ease-in-out infinite alternate}
 .b11-glow{position:absolute;width:900px;height:900px;border-radius:50%;background:radial-gradient(circle,rgba(242,236,226,.16) 0%,rgba(242,236,226,0) 65%);pointer-events:none;animation:b11-glow 22s ease-in-out infinite alternate}
 @keyframes b11-glow{0%{transform:translate(-30%,-10%)}50%{transform:translate(60%,20%)}100%{transform:translate(120%,-15%)}}
-.b11-shine{position:relative;overflow:hidden;transition:letter-spacing .8s cubic-bezier(.2,.7,.2,1),background-color .6s ease,color .6s ease}
+.b11-shine{position:relative;overflow:clip;transition:letter-spacing .8s cubic-bezier(.2,.7,.2,1),background-color .6s ease,color .6s ease}
 .b11-shine::after{content:"";position:absolute;top:0;bottom:0;left:-60%;width:40%;background:linear-gradient(100deg,rgba(255,255,255,0) 0%,rgba(255,255,255,.55) 50%,rgba(255,255,255,0) 100%);transform:skewX(-20deg);animation:b11-sheen 5s ease-in-out 2.5s infinite}
 @keyframes b11-sheen{0%{left:-60%}35%,100%{left:130%}}
 .b11-shine:hover{letter-spacing:8px !important;background-color:#EEE7DC !important;color:#402615 !important}
@@ -151,7 +151,7 @@ a:hover{color:#6E8090}
 @keyframes el-sl-l{from{opacity:0;transform:translateX(-46px);filter:blur(6px)}to{opacity:1;transform:none;filter:blur(0)}}
 @keyframes el-sl-r{from{opacity:0;transform:translateX(46px);filter:blur(6px)}to{opacity:1;transform:none;filter:blur(0)}}
 .e-eleven{animation:el-shine 6s ease-in-out infinite alternate}
-.el-frame{overflow:hidden}
+.el-frame{overflow:clip}
 @supports (animation-timeline: view()){
 .b11-rv .e-eleven.b11-x{animation:b11-silk linear both,el-shine 6s ease-in-out infinite alternate;animation-timeline:--b11rv,auto;animation-range:entry 8% entry 65%,normal}
 .el-zoom{animation:el-zoom linear both;animation-timeline:view();animation-range:entry 0% exit 35%}
@@ -162,6 +162,25 @@ a:hover{color:#6E8090}
 .b11-rv .e-svc.b11-x{animation:el-soft linear both;animation-timeline:view();animation-range:entry 20% cover 38%}
 }
 .el-drift-wrap{animation:el-drift 22s ease-in-out infinite alternate}
+
+/* ===== Signatures drawn by hand, letter by letter ===== */
+@keyframes sig-draw{0%{stroke-dashoffset:1;fill-opacity:0}72%{stroke-dashoffset:0;fill-opacity:0}100%{stroke-dashoffset:0;fill-opacity:1}}
+.sig path{fill:currentColor;stroke:currentColor;stroke-width:1.1px;vector-effect:non-scaling-stroke;stroke-linecap:round;stroke-linejoin:round;stroke-dasharray:1;stroke-dashoffset:0}
+@supports (animation-timeline: view()){
+.sig{view-timeline-name:--sig}
+.sig path{animation:sig-draw linear both;animation-timeline:--sig}
+.sig .g0{animation-range:cover 6% cover 16%}
+.sig .g1{animation-range:cover 10% cover 20%}
+.sig .g2{animation-range:cover 14% cover 24%}
+.sig .g3{animation-range:cover 18% cover 28%}
+.sig .g4{animation-range:cover 22% cover 32%}
+.sig .g5{animation-range:cover 26% cover 36%}
+.sig .g6{animation-range:cover 30% cover 40%}
+.sig .g7{animation-range:cover 34% cover 44%}
+.sig .g8{animation-range:cover 38% cover 48%}
+.sig .g9{animation-range:cover 42% cover 52%}
+}
+@media (prefers-reduced-motion:reduce){.sig path{animation:none!important}}
 </style>
 </helmet>
 <div style="width: 1440px; height: 3570px; display: flex; flex-direction: column; background: #EEE7DC; overflow: clip">
@@ -169,7 +188,7 @@ a:hover{color:#6E8090}
 
 
 <!-- ============ OUR STORY, SIGNED ============ -->
-<section class="b11-rv" style="position: relative; height: 1000px; background: #F6F6F5; overflow: hidden">
+<section class="b11-rv" style="position: relative; height: 1000px; background: #F6F6F5; overflow: clip">
 <header style="position: relative; z-index: 2; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: center; padding: 34px 72px">
 <nav aria-label="Primary" style="display: flex; gap: 44px; font-size: 11px; letter-spacing: 4px"><a href="index.html">THE HOUSE</a><a href="the-eleven.html" aria-current="page" style="color: #6E8090; border-bottom: 1px solid #9EABB7; padding-bottom: 4px">THE ELEVEN</a><a href="work.html">WORK</a></nav>
 <a href="index.html" aria-label="By Eleven Creative, home" style="justify-self: center; display: flex; flex-direction: column; align-items: center; gap: 7px">
@@ -190,7 +209,7 @@ a:hover{color:#6E8090}
 </section>
 
 <!-- ============ THE ELEVEN CRAFTS ============ -->
-<section class="b11-rv" aria-labelledby="crafts-title" style="position: relative; background: #402615; padding: 160px 130px 160px; display: grid; grid-template-columns: 380px minmax(0, 1fr); column-gap: 100px; align-items: center; overflow: hidden">
+<section class="b11-rv" aria-labelledby="crafts-title" style="position: relative; background: #402615; padding: 160px 130px 160px; display: grid; grid-template-columns: 380px minmax(0, 1fr); column-gap: 100px; align-items: center; overflow: clip">
 <span aria-hidden="true" class="b11-glow" style="left: -200px; top: -250px"></span>
 <div style="position: relative; display: flex; flex-direction: column; gap: 44px">
 <span class="b11-x" style="font-size: 10px; letter-spacing: 6px; color: #BEA683">BY ELEVEN&nbsp;&nbsp;·&nbsp;&nbsp;OUR SERVICES</span>
@@ -201,7 +220,7 @@ a:hover{color:#6E8090}
 </section>
 
 <!-- ============ THE FOUNDERS ============ -->
-<section class="b11-rv" style="position: relative; background: #EEE7DC; padding: 150px 100px 160px; display: grid; grid-template-columns: 540px minmax(0, 1fr); column-gap: 120px; align-items: center; overflow: hidden">
+<section class="b11-rv" style="position: relative; background: #EEE7DC; padding: 150px 100px 160px; display: grid; grid-template-columns: 540px minmax(0, 1fr); column-gap: 120px; align-items: center; overflow: clip">
 <div class="b11-x el-frame" style="width: 595px; height: 795px"><img class="el-zoom" src="assets/img/d551ac33d11af5e0482e534c45b35a6e.jpg" alt="Hollie and Juls, the founders of By Eleven, working together in a white studio" style="display: block; width: 595px; height: 795px; object-fit: cover; object-position: center 60%"></div>
 <div style="display: flex; flex-direction: column; gap: 28px">
 <span class="b11-x b11-t1" style="font-size: 11px; letter-spacing: 6px; color: #6E8090"><b>THE FOUNDERS</b></span>
@@ -210,8 +229,8 @@ a:hover{color:#6E8090}
 <p class="b11-x b11-t4" style="margin: 0; max-width: 500px; font-size: 16px; line-height: 1.9; font-weight: 300; color: #402615">By Eleven began as a partnership, and it remains one. Every brand in our care is guided by the two of us, personally, with the discretion, patience and attention to detail that true luxury asks for.</p>
 <p class="b11-x b11-t5" style="margin: 0; max-width: 560px; font-family: 'Cormorant Garamond', serif; font-style: italic; font-weight: 300; font-size: 26px; line-height: 1.35; color: #6E8090">The people you meet are the people who ride beside you.</p>
 <div class="b11-x b11-t7" style="display: flex; gap: 72px; padding-top: 6px">
-<div style="display: flex; flex-direction: column; gap: 6px"><span class="e-sign" style="font-family: &quot;Mrs Saint Delafield&quot;, cursive; font-size: 62px; line-height: 1; color: rgb(64, 38, 21)">Juls</span><span style="font-size: 10px; letter-spacing: 4px; color: rgb(110, 128, 144)"><b>JULS · CO-FOUNDER</b></span></div>
-<div style="display: flex; flex-direction: column; gap: 6px"><span class="e-sign e-sign2" style="font-family: &quot;Mrs Saint Delafield&quot;, cursive; font-size: 62px; line-height: 1; color: rgb(64, 38, 21)">Hollie</span><span style="font-size: 10px; letter-spacing: 4px; color: rgb(110, 128, 144)"><b>HOLLIE · CO-FOUNDER</b></span></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="font-family: &quot;Mrs Saint Delafield&quot;, cursive; font-size: 62px; line-height: 1; display: inline-block; color: rgb(64, 38, 21)"><svg class="sig" role="img" aria-label="Juls" viewBox="-84 -840 1549 1280" width="96.0" height="79.4" style="display: block; overflow: visible; margin: -14.9px 0 -14.9px -2.5px"><path class="g0" pathLength="1" d="M281 -158Q327 -123 417 -123H421Q477 -227 528 -315Q375 -225 281 -158ZM871 -631Q871 -665 825 -671Q738 -570 633 -405Q750 -475 810.5 -528.0Q871 -581 871 -631ZM261 -177Q355 -243 552 -357Q672 -563 769 -671Q664 -664 563.0 -619.0Q462 -574 392.5 -511.5Q323 -449 280.5 -378.5Q238 -308 238.0 -257.0Q238 -206 261 -177ZM410 -103H389Q301 -103 247 -134Q-9 55 -9 237Q-9 349 69 349Q106 349 144 311Q166 290 183.5 271.0Q201 252 226.5 213.0Q252 174 268.5 147.5Q285 121 315.0 68.5Q345 16 360.5 -13.0Q376 -42 410 -103ZM895 -633Q894 -574 821.0 -511.0Q748 -448 606 -362Q528 -236 465 -126Q562 -141 629 -197Q633 -200 638.0 -200.0Q643 -200 643.0 -194.5Q643 -189 621.0 -172.5Q599 -156 552.5 -136.0Q506 -116 455 -108Q296 162 236 238Q155 341 106 368Q76 384 48 384Q5 384 -19.5 346.0Q-44 308 -44 260Q-44 50 225 -151Q186 -186 186.0 -246.5Q186 -307 232.5 -381.5Q279 -456 356.5 -522.0Q434 -588 548.5 -635.0Q663 -682 785 -689Q832 -738 867 -764Q879 -772 897.5 -772.0Q916 -772 916 -762Q916 -757 902.0 -747.0Q888 -737 881 -731L840 -688Q863 -683 879.0 -667.0Q895 -651 895 -633Z"></path><path class="g1" pathLength="1" d="M697 -13Q697 -28 711.5 -52.0Q726 -76 727.0 -80.0Q728 -84 725.0 -84.0Q722 -84 716.5 -78.5Q711 -73 655.5 -36.5Q600 0 579 0Q565 0 565.0 -18.0Q565 -36 621.0 -111.0Q677 -186 700 -186Q705 -186 709.5 -181.5Q714 -177 714.0 -174.5Q714 -172 662.5 -113.0Q611 -54 611 -37Q611 -33 615 -33Q634 -33 697.0 -84.0Q760 -135 786.5 -163.0Q813 -191 828.0 -191.0Q843 -191 843 -178Q843 -170 837.0 -162.0Q831 -154 814.5 -133.5Q798 -113 784 -95Q745 -45 745.0 -32.5Q745 -20 755.5 -20.0Q766 -20 807 -48Q883 -98 946 -149L968 -167Q975 -172 980.0 -172.0Q985 -172 985 -166V-163Q989 -163 931.5 -119.0Q874 -75 808.5 -31.0Q743 13 726 13Q697 13 697 -13Z"></path><path class="g2" pathLength="1" d="M1207 -166Q1214 -171 1220.0 -171.0Q1226 -171 1226 -164V-162Q1122 -76 1068 -42Q998 11 950 11Q908 11 908 -39Q908 -106 994.5 -237.5Q1081 -369 1189.0 -474.0Q1297 -579 1352 -579Q1377 -579 1377 -557Q1377 -502 1245.5 -375.5Q1114 -249 987 -160Q950 -89 950.0 -52.0Q950 -15 976.0 -15.0Q1002 -15 1044 -45Q1115 -87 1182 -145ZM1327 -547Q1285 -547 1178.0 -426.0Q1071 -305 1001 -184Q1116 -266 1226.0 -384.5Q1336 -503 1336 -538Q1336 -547 1327 -547Z"></path><path class="g3" pathLength="1" d="M1406 -166Q1414 -171 1419.5 -171.0Q1425 -171 1425 -164V-162Q1348 -97 1262.5 -40.0Q1177 17 1154.0 17.0Q1131 17 1115.5 8.5Q1100 0 1100.0 -11.0Q1100 -22 1106.0 -29.5Q1112 -37 1117.0 -37.0Q1122 -37 1133.5 -21.5Q1145 -6 1156 -6Q1179 -6 1192.0 -55.0Q1205 -104 1205.0 -122.5Q1205 -141 1202.5 -141.0Q1200 -141 1198 -139L1169 -116L1165 -131Q1228 -181 1238 -198Q1244 -214 1255 -214Q1262 -214 1262.0 -209.0Q1262 -204 1255.0 -187.5Q1248 -171 1236.5 -113.0Q1225 -55 1225.0 -46.0Q1225 -37 1230 -37Q1300 -80 1378 -144Z"></path></svg></span><span style="font-size: 10px; letter-spacing: 4px; color: rgb(110, 128, 144)"><b>JULS · CO-FOUNDER</b></span></div>
+<div style="display: flex; flex-direction: column; gap: 6px"><span style="font-family: &quot;Mrs Saint Delafield&quot;, cursive; font-size: 62px; line-height: 1; display: inline-block; color: rgb(64, 38, 21)"><svg class="sig" role="img" aria-label="Hollie" viewBox="-77 -840 2062 1280" width="127.8" height="79.4" style="display: block; overflow: visible; margin: -14.9px 0 -14.9px -2.5px"><path class="g4" pathLength="1" d="M1015 -732Q1015 -688 932.0 -617.0Q849 -546 696 -444Q603 -319 538.5 -205.0Q474 -91 474.0 -47.0Q474 -3 499 -3Q517 -3 548.5 -22.0Q580 -41 602 -60L624 -79Q630 -86 635.0 -86.0Q640 -86 640 -82Q640 -56 576.0 -18.0Q512 20 480 20Q419 20 419.0 -27.5Q419 -75 467.0 -170.0Q515 -265 591 -374Q426 -267 344 -212Q238 -67 133.0 39.5Q28 146 -14 146Q-37 146 -37 129Q-37 73 48.5 -8.0Q134 -89 286 -195Q380 -329 443.5 -449.5Q507 -570 507 -625Q507 -688 444 -702Q395 -714 341.5 -714.0Q288 -714 256.5 -711.0Q225 -708 187.0 -699.5Q149 -691 125.5 -672.0Q102 -653 102 -626Q102 -595 156.5 -577.0Q211 -559 278.5 -541.0Q346 -523 365 -497Q373 -488 376 -464Q376 -457 371.5 -457.0Q367 -457 363 -464Q354 -485 305.5 -501.5Q257 -518 204.5 -527.5Q152 -537 109.5 -558.5Q67 -580 67.0 -612.0Q67 -644 88.0 -667.5Q109 -691 137.5 -703.0Q166 -715 210 -722Q276 -731 364.5 -731.0Q453 -731 502.5 -702.0Q552 -673 552 -621Q552 -510 374 -255Q422 -287 510.0 -344.5Q598 -402 623 -419Q726 -559 829.5 -654.0Q933 -749 997 -749Q1015 -749 1015 -732ZM-2 123Q26 123 98.5 44.5Q171 -34 256 -152Q-9 34 -9 114Q-9 123 -2 123ZM973 -726Q945 -726 879.0 -660.5Q813 -595 733 -492Q979 -660 979 -720Q979 -726 973 -726Z"></path><path class="g5" pathLength="1" d="M843 -86Q899 -86 977 -149L994 -144Q896 -62 825 -62Q817 -62 813 -63Q786 -30 754.0 -9.5Q722 11 698 11Q660 11 660.0 -31.5Q660 -74 731 -145Q719 -174 719.0 -206.0Q719 -238 742.0 -258.0Q765 -278 795.5 -278.0Q826 -278 847.0 -258.0Q868 -238 868 -201Q868 -144 831 -87Q835 -86 843 -86ZM811 -96Q842 -148 842.0 -184.5Q842 -221 824.0 -238.5Q806 -256 789 -256Q754 -256 754.0 -220.0Q754 -184 770.0 -148.5Q786 -113 811 -96ZM701 -37Q701 -17 727.0 -17.0Q753 -17 793 -70Q766 -84 745 -119Q701 -71 701 -37Z"></path><path class="g6" pathLength="1" d="M1238 -166Q1245 -171 1251.0 -171.0Q1257 -171 1257 -164V-162Q1153 -76 1099 -42Q1029 11 981 11Q939 11 939 -39Q939 -106 1025.5 -237.5Q1112 -369 1220.0 -474.0Q1328 -579 1383 -579Q1408 -579 1408 -557Q1408 -502 1276.5 -375.5Q1145 -249 1018 -160Q981 -89 981.0 -52.0Q981 -15 1007.0 -15.0Q1033 -15 1075 -45Q1146 -87 1213 -145ZM1358 -547Q1316 -547 1209.0 -426.0Q1102 -305 1032 -184Q1147 -266 1257.0 -384.5Q1367 -503 1367 -538Q1367 -547 1358 -547Z"></path><path class="g7" pathLength="1" d="M1480 -166Q1487 -171 1493.0 -171.0Q1499 -171 1499 -164V-162Q1395 -76 1341 -42Q1271 11 1223 11Q1181 11 1181 -39Q1181 -106 1267.5 -237.5Q1354 -369 1462.0 -474.0Q1570 -579 1625 -579Q1650 -579 1650 -557Q1650 -502 1518.5 -375.5Q1387 -249 1260 -160Q1223 -89 1223.0 -52.0Q1223 -15 1249.0 -15.0Q1275 -15 1317 -45Q1388 -87 1455 -145ZM1600 -547Q1558 -547 1451.0 -426.0Q1344 -305 1274 -184Q1389 -266 1499.0 -384.5Q1609 -503 1609 -538Q1609 -547 1600 -547Z"></path><path class="g8" pathLength="1" d="M1588.5 -302.0Q1598 -302 1603.5 -296.0Q1609 -290 1609.0 -279.0Q1609 -268 1594.0 -251.0Q1579 -234 1568.0 -234.0Q1557 -234 1552.0 -240.5Q1547 -247 1547.0 -255.5Q1547 -264 1563.0 -283.0Q1579 -302 1588.5 -302.0ZM1671 -167Q1679 -172 1683.5 -172.0Q1688 -172 1688 -166V-163Q1692 -163 1634.5 -119.0Q1577 -75 1511.5 -31.0Q1446 13 1429 13Q1400 13 1400 -11Q1400 -40 1450.0 -120.5Q1500 -201 1523 -201Q1540 -201 1540.0 -188.0Q1540 -175 1494.0 -117.0Q1448 -59 1448 -34Q1448 -20 1458.5 -20.0Q1469 -20 1511 -48Q1586 -98 1649 -149Z"></path><path class="g9" pathLength="1" d="M1926 -166Q1933 -171 1939.0 -171.0Q1945 -171 1945 -164V-162Q1841 -76 1772.0 -33.0Q1703 10 1647 10Q1602 10 1602 -34Q1602 -99 1668.0 -167.5Q1734 -236 1779 -236Q1804 -236 1804 -208Q1799 -153 1646 -60V-50Q1646 -17 1680.5 -17.0Q1715 -17 1755 -40Q1833 -86 1901 -145ZM1753 -205Q1731 -205 1696.5 -168.0Q1662 -131 1650 -84Q1698 -113 1731.0 -145.5Q1764 -178 1764.0 -191.5Q1764 -205 1753 -205Z"></path></svg></span><span style="font-size: 10px; letter-spacing: 4px; color: rgb(110, 128, 144)"><b>HOLLIE · CO-FOUNDER</b></span></div>
 </div>
 </div>
 </section>
@@ -234,7 +253,7 @@ a:hover{color:#6E8090}
 <span style="font-size: 10px; letter-spacing: 5px; color: #9EABB7">THE BY ELEVEN LETTER</span>
 <p style="margin: 0; font-size: 14px; line-height: 1.7; font-weight: 300; color: #D6C8B1">Rare, considered notes from the house. Never more than once a season.</p>
 <form class="b11-field" style="display: flex; align-items: center; border-bottom: 1px solid #F2ECE2; transition: border-color .5s ease">
-<label for="letter" style="position: absolute; width: 1px; height: 1px; overflow: hidden">Email address</label>
+<label for="letter" style="position: absolute; width: 1px; height: 1px; overflow: clip">Email address</label>
 <input id="letter" type="email" placeholder="Your email address" style="flex-grow: 1; min-height: 48px; background: transparent; border: 0; color: #F2ECE2; font-family: 'Jost', sans-serif; font-size: 14px">
 <button type="submit" style="min-height: 48px; padding: 0 0 0 16px; background: transparent; border: 0; color: #BEA683; font-family: 'Jost', sans-serif; font-size: 11px; letter-spacing: 4px; cursor: pointer">SUBSCRIBE</button>
 </form>

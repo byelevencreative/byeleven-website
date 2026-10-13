@@ -70,7 +70,7 @@ a:hover{color:#6E8090}
 @keyframes b11-unveil{from{transform:translateY(110%)}to{transform:none}}
 @keyframes b11-xi-in{from{opacity:0;filter:blur(24px)}to{opacity:1;filter:blur(0)}}
 @keyframes b11-drop{from{transform:scaleY(0)}to{transform:scaleY(1)}}
-.b11-mask{display:block;overflow:hidden;padding-bottom:.08em}
+.b11-mask{display:block;overflow:clip;padding-bottom:.08em}
 .b11-mask>span{display:block}
 .b11-rule{position:absolute;left:0;top:0;height:2px;width:100%;transform-origin:left center;transition:background-color .8s ease}
 .b11-drop{transform-origin:top center}
@@ -82,7 +82,7 @@ a:hover{color:#6E8090}
 .b11-xi{animation:b11-float 14s ease-in-out infinite alternate}
 .b11-glow{position:absolute;width:900px;height:900px;border-radius:50%;background:radial-gradient(circle,rgba(242,236,226,.16) 0%,rgba(242,236,226,0) 65%);pointer-events:none;animation:b11-glow 22s ease-in-out infinite alternate}
 @keyframes b11-glow{0%{transform:translate(-30%,-10%)}50%{transform:translate(60%,20%)}100%{transform:translate(120%,-15%)}}
-.b11-shine{position:relative;overflow:hidden;transition:letter-spacing .8s cubic-bezier(.2,.7,.2,1),background-color .6s ease,color .6s ease}
+.b11-shine{position:relative;overflow:clip;transition:letter-spacing .8s cubic-bezier(.2,.7,.2,1),background-color .6s ease,color .6s ease}
 .b11-shine::after{content:"";position:absolute;top:0;bottom:0;left:-60%;width:40%;background:linear-gradient(100deg,rgba(255,255,255,0) 0%,rgba(255,255,255,.55) 50%,rgba(255,255,255,0) 100%);transform:skewX(-20deg);animation:b11-sheen 5s ease-in-out 2.5s infinite}
 @keyframes b11-sheen{0%{left:-60%}35%,100%{left:130%}}
 .b11-shine:hover{letter-spacing:8px !important;background-color:#EEE7DC !important;color:#402615 !important}
@@ -127,8 +127,8 @@ a:hover{color:#6E8090}
 
 
 <!-- ============ THE IDEA ============ -->
-<section style="position: relative; height: 1000px; background: #F4F2EF; overflow: hidden">
-<div class="b11-emerge" role="img" aria-label="A bay horse at full gallop, mane and tail flying, in a white studio" style="position: absolute; left: 133px; top: 70px; width: 1175px; height: 753px; overflow: hidden; -webkit-mask-image: radial-gradient(ellipse 60% 62% at 50% 50%, #000 58%, transparent 100%); mask-image: radial-gradient(ellipse 60% 62% at 50% 50%, #000 58%, transparent 100%)"><img src="assets/img/8e60e9048a9fc29957a0cdc8eac36745.jpg" alt="" style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: block"><img class="b11-mane" src="assets/img/49e59bcfa4eda40a00fe821f03d76095.png" alt="" style="position: absolute; left: 40.4595%; top: 12.251%; width: 12.0613%; height: 30.8765%; display: block"><img class="b11-tail" src="assets/img/51d165fdec7403a26545e32f9fc9fd7d.png" alt="" style="position: absolute; left: 65.5392%; top: 48.4064%; width: 19.5916%; height: 36.0558%; display: block"></div>
+<section style="position: relative; height: 1000px; background: #F4F2EF; overflow: clip">
+<div class="b11-emerge" role="img" aria-label="A bay horse at full gallop, mane and tail flying, in a white studio" style="position: absolute; left: 133px; top: 70px; width: 1175px; height: 753px; overflow: clip; -webkit-mask-image: radial-gradient(ellipse 60% 62% at 50% 50%, #000 58%, transparent 100%); mask-image: radial-gradient(ellipse 60% 62% at 50% 50%, #000 58%, transparent 100%)"><img src="assets/img/8e60e9048a9fc29957a0cdc8eac36745.jpg" alt="" style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: block"><img class="b11-mane" src="assets/img/49e59bcfa4eda40a00fe821f03d76095.png" alt="" style="position: absolute; left: 40.4595%; top: 12.251%; width: 12.0613%; height: 30.8765%; display: block"><img class="b11-tail" src="assets/img/51d165fdec7403a26545e32f9fc9fd7d.png" alt="" style="position: absolute; left: 65.5392%; top: 48.4064%; width: 19.5916%; height: 36.0558%; display: block"></div>
 <header style="position: relative; z-index: 2; display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); align-items: center; padding: 34px 72px">
 <nav aria-label="Primary" style="display: flex; gap: 44px; font-size: 11px; letter-spacing: 4px"><a href="index.html">THE HOUSE</a><a href="the-eleven.html">THE ELEVEN</a><a href="work.html">WORK</a></nav>
 <a href="#top" aria-label="By Eleven Creative, home" style="justify-self: center; display: flex; flex-direction: column; align-items: center; gap: 7px">
@@ -153,7 +153,7 @@ a:hover{color:#6E8090}
 
 
 <!-- ============ WHY ELEVEN ============ -->
-<section class="pw" style="padding: 170px 100px 160px; display: flex; flex-direction: column; align-items: center; gap: 40px; text-align: center; overflow: hidden">
+<section class="pw" style="padding: 170px 100px 160px; display: flex; flex-direction: column; align-items: center; gap: 40px; text-align: center; overflow: clip">
 <h1 style="margin: 0; white-space: nowrap; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 56px; line-height: 1; letter-spacing: 12px"><span class="pw-l" style="display: block">PEOPLE WORKING</span><span class="pw-r" style="display: block"><em style="font-style: italic; letter-spacing: 0px; color: rgb(110, 128, 144)">with</em> PEOPLE</span></h1><span class="pw-fade" style="font-size: 11px; letter-spacing: 6px; color: #7D5E3C">OUR LEGACY</span>
 
 <span aria-hidden="true" class="pw-line" style="display: block; width: 120px; height: 1px; background: {{blue}}"></span>
@@ -161,7 +161,7 @@ a:hover{color:#6E8090}
 </section>
 
 <!-- ============ THE FOUNDERS, TOGETHER ============ -->
-<section aria-label="Hollie and Juls" style="position: relative; height: 860px; overflow: hidden; background: #C9D2D9">
+<section aria-label="Hollie and Juls" style="position: relative; height: 860px; overflow: clip; background: #C9D2D9">
 <video ref="{{vref}}" src="assets/founders.mp4" poster="assets/img/c8c989ddaee8e37b11b8d8070e62ff85.jpg" autoplay="" muted="" loop="" playsinline="" aria-label="Hollie and Juls, the founders of By Eleven, riding side by side through calm blue sea" style="position: absolute; inset: 0; width: 1440px; height: 860px; object-fit: cover"></video>
 <div aria-hidden="true" style="position: absolute; left: 0; right: 0; bottom: 0; height: 260px; background: linear-gradient(180deg, rgba(46,63,77,0) 0%, rgba(46,63,77,0.45) 100%)"></div>
 <button type="button" onClick="{{toggleSound}}" aria-label="{{soundLabel}}" aria-pressed="{{soundPressed}}" style="position: absolute; top: 36px; right: 72px; display: flex; align-items: center; gap: 12px; min-height: 44px; padding: 0 22px; background: rgba(242, 236, 226, 0.85); border: 0; border-radius: 22px; color: #2E3F4D; font-family: 'Jost', sans-serif; font-size: 10px; letter-spacing: 4px; cursor: pointer">
@@ -187,7 +187,7 @@ a:hover{color:#6E8090}
 
 
 <!-- ============ CLOSE ============ -->
-<section ref="{{whyRef}}" class="b11-rv {{whyIn}}" style="position: relative; padding: 170px 200px 160px; display: flex; flex-direction: column; align-items: center; gap: 56px; text-align: center; overflow: hidden; background-color: transparent">
+<section ref="{{whyRef}}" class="b11-rv {{whyIn}}" style="position: relative; padding: 170px 200px 160px; display: flex; flex-direction: column; align-items: center; gap: 56px; text-align: center; overflow: clip; background-color: transparent">
 <div aria-hidden="true" class="b11-xi-wrap" style="position: absolute; inset: 0; pointer-events: none"><div class="b11-xi" style="position: absolute; left: 50%; top: 50%; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 620px; line-height: 1; color: #E4D9C8; transform: translate(-50%, -50%)">XI</div></div>
 <div style="position: relative; display: flex; flex-direction: column; align-items: center; gap: 24px">
 <span class="b11-x b11-t1" style="font-size: 11px; letter-spacing: 6px; color: #7D5E3C">THE NAME</span>
@@ -199,7 +199,7 @@ a:hover{color:#6E8090}
 <div class="b11-col b11-c3" style="display: flex; flex-direction: column; gap: 16px; padding-top: 28px"><span aria-hidden="true" class="b11-rule" style="background-color: #BEA683"></span><span class="b11-ct b11-x b11-t5" style="font-family: 'Cormorant Garamond', serif; font-style: italic; font-size: 34px; color: #7D5E3C">Eleven crafts</span><p class="b11-x b11-t6" style="margin: 0; font-size: 15px; line-height: 1.8; font-weight: 300; color: #5E4A38">Every brand we touch passes through eleven disciplines under one roof, so nothing is lost between the idea and the world.</p></div>
 </div>
 <p class="b11-x b11-t7" style="position: relative; margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 30px; letter-spacing: 4px">BY, <em style="font-style: italic; letter-spacing: 0; color: #7D5E3C">our signature.</em> ELEVEN, <em style="font-style: italic; letter-spacing: 0; color: #7D5E3C">our promise.</em></p>
-</section><section ref="{{closeRef}}" class="b11-rv {{closeIn}}" style="position: relative; background: #55697A; color: #F2ECE2; padding: 160px 200px 170px; display: flex; flex-direction: column; align-items: center; gap: 36px; text-align: center; overflow: hidden">
+</section><section ref="{{closeRef}}" class="b11-rv {{closeIn}}" style="position: relative; background: #55697A; color: #F2ECE2; padding: 160px 200px 170px; display: flex; flex-direction: column; align-items: center; gap: 36px; text-align: center; overflow: clip">
 <span aria-hidden="true" class="b11-glow" style="left: 0; top: -200px"></span>
 <span aria-hidden="true" class="b11-drop" style="position: relative; display: block; width: 1px; height: 96px; background: #F2ECE2"></span>
 <span class="b11-x b11-t3" style="position: relative; font-size: 11px; letter-spacing: 6px; color: #DCE3E8">BY APPOINTMENT</span>
@@ -227,7 +227,7 @@ a:hover{color:#6E8090}
 <span style="font-size: 10px; letter-spacing: 5px; color: #BEA683">THE BY ELEVEN LETTER</span>
 <p style="margin: 0; font-size: 14px; line-height: 1.7; font-weight: 300; color: #D6C8B1">Rare, considered notes from the house. Never more than once a season.</p>
 <form class="b11-field" style="display: flex; align-items: center; border-bottom: 1px solid #F2ECE2; transition: border-color .5s ease">
-<label for="letter" style="position: absolute; width: 1px; height: 1px; overflow: hidden">Email address</label>
+<label for="letter" style="position: absolute; width: 1px; height: 1px; overflow: clip">Email address</label>
 <input id="letter" type="email" placeholder="Your email address" style="flex-grow: 1; min-height: 48px; background: transparent; border: 0; color: #F2ECE2; font-family: 'Jost', sans-serif; font-size: 14px">
 <button type="submit" style="min-height: 48px; padding: 0 0 0 16px; background: transparent; border: 0; color: #BEA683; font-family: 'Jost', sans-serif; font-size: 11px; letter-spacing: 4px; cursor: pointer">SUBSCRIBE</button>
 </form>

@@ -70,7 +70,7 @@ a:hover{color:#6E8090}
 @keyframes b11-unveil{from{transform:translateY(110%)}to{transform:none}}
 @keyframes b11-xi-in{from{opacity:0;filter:blur(24px)}to{opacity:1;filter:blur(0)}}
 @keyframes b11-drop{from{transform:scaleY(0)}to{transform:scaleY(1)}}
-.b11-mask{display:block;overflow:hidden;padding-bottom:.08em}
+.b11-mask{display:block;overflow:clip;padding-bottom:.08em}
 .b11-mask>span{display:block}
 .b11-rule{position:absolute;left:0;top:0;height:2px;width:100%;transform-origin:left center;transition:background-color .8s ease}
 .b11-drop{transform-origin:top center}
@@ -82,7 +82,7 @@ a:hover{color:#6E8090}
 .b11-xi{animation:b11-float 14s ease-in-out infinite alternate}
 .b11-glow{position:absolute;width:900px;height:900px;border-radius:50%;background:radial-gradient(circle,rgba(242,236,226,.16) 0%,rgba(242,236,226,0) 65%);pointer-events:none;animation:b11-glow 22s ease-in-out infinite alternate}
 @keyframes b11-glow{0%{transform:translate(-30%,-10%)}50%{transform:translate(60%,20%)}100%{transform:translate(120%,-15%)}}
-.b11-shine{position:relative;overflow:hidden;transition:letter-spacing .8s cubic-bezier(.2,.7,.2,1),background-color .6s ease,color .6s ease}
+.b11-shine{position:relative;overflow:clip;transition:letter-spacing .8s cubic-bezier(.2,.7,.2,1),background-color .6s ease,color .6s ease}
 .b11-shine::after{content:"";position:absolute;top:0;bottom:0;left:-60%;width:40%;background:linear-gradient(100deg,rgba(255,255,255,0) 0%,rgba(255,255,255,.55) 50%,rgba(255,255,255,0) 100%);transform:skewX(-20deg);animation:b11-sheen 5s ease-in-out 2.5s infinite}
 @keyframes b11-sheen{0%{left:-60%}35%,100%{left:130%}}
 .b11-shine:hover{letter-spacing:8px !important;background-color:#EEE7DC !important;color:#402615 !important}
@@ -129,7 +129,7 @@ a:hover{color:#6E8090}
 @media (prefers-reduced-motion:reduce){.pw .pw-l,.pw .pw-r,.pw .pw-fade,.pw .pw-line,.pw .pw-ink{animation:none!important;opacity:1;transform:none;filter:none;color:#5E4A38;background:none}}
 </style>
 </helmet>
-<div style="position: relative; width: 390px; height: 4052px; display: flex; flex-direction: column; background: #EEE7DC; overflow: hidden">
+<div style="position: relative; width: 390px; height: 4052px; display: flex; flex-direction: column; background: #EEE7DC; overflow: clip">
 
 <sc-if value="{{menuOpen}}">
 <div class="m-sheet" role="dialog" aria-label="Menu">
@@ -152,7 +152,7 @@ a:hover{color:#6E8090}
 </sc-if>
 
 <!-- ============ HERO: THE HORSE ============ -->
-<section style="position: relative; height: 664px; background: #F4F2EF; overflow: hidden">
+<section style="position: relative; height: 664px; background: #F4F2EF; overflow: clip">
 <header style="position: relative; z-index: 3; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding: 22px 24px">
 <span></span>
 <a href="#top" aria-label="By Eleven Creative, home" style="display: flex; flex-direction: column; align-items: center; gap: 6px">
@@ -160,7 +160,7 @@ a:hover{color:#6E8090}
 <span class="b11-mark" style="font-family: 'Cormorant Garamond', serif; font-size: 24px; letter-spacing: 10px; margin-right: -10px; line-height: 1">ELEVEN</span></a>
 <button type="button" class="m-menu-btn" onClick="{{toggleMenu}}" aria-label="Open the menu" aria-expanded="{{menuExpanded}}" style="justify-self: end"><span style="display: flex; flex-direction: column; gap: 6px"><i></i><i style="width: 14px; margin-left: 8px"></i></span></button>
 </header>
-<div class="b11-emerge" role="img" aria-label="A bay horse at full gallop, mane and tail flying, in a white studio" style="position: absolute; left: -70px; top: 96px; width: 530px; height: 340px; overflow: hidden; -webkit-mask-image: radial-gradient(ellipse 62% 64% at 50% 50%, #000 60%, transparent 100%); mask-image: radial-gradient(ellipse 62% 64% at 50% 50%, #000 60%, transparent 100%)"><img src="../assets/img/8e60e9048a9fc29957a0cdc8eac36745.jpg" alt="" style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: block"><img class="b11-mane" src="../assets/img/49e59bcfa4eda40a00fe821f03d76095.png" alt="" style="position: absolute; left: 40.4595%; top: 12.251%; width: 12.0613%; height: 30.8765%; display: block"><img class="b11-tail" src="../assets/img/51d165fdec7403a26545e32f9fc9fd7d.png" alt="" style="position: absolute; left: 65.5392%; top: 48.4064%; width: 19.5916%; height: 36.0558%; display: block"></div>
+<div class="b11-emerge" role="img" aria-label="A bay horse at full gallop, mane and tail flying, in a white studio" style="position: absolute; left: -70px; top: 96px; width: 530px; height: 340px; overflow: clip; -webkit-mask-image: radial-gradient(ellipse 62% 64% at 50% 50%, #000 60%, transparent 100%); mask-image: radial-gradient(ellipse 62% 64% at 50% 50%, #000 60%, transparent 100%)"><img src="../assets/img/8e60e9048a9fc29957a0cdc8eac36745.jpg" alt="" style="position: absolute; left: 0; top: 0; width: 100%; height: 100%; display: block"><img class="b11-mane" src="../assets/img/49e59bcfa4eda40a00fe821f03d76095.png" alt="" style="position: absolute; left: 40.4595%; top: 12.251%; width: 12.0613%; height: 30.8765%; display: block"><img class="b11-tail" src="../assets/img/51d165fdec7403a26545e32f9fc9fd7d.png" alt="" style="position: absolute; left: 65.5392%; top: 48.4064%; width: 19.5916%; height: 36.0558%; display: block"></div>
 <div style="position: absolute; left: 24px; right: 24px; top: 462px; display: flex; flex-direction: column; align-items: center; gap: 22px; text-align: center">
 <span class="b11-rise b11-d3" style="white-space: nowrap; font-size: 9px; font-weight: 500; letter-spacing: 2.6px; color: #7D5E3C"><b>A LUXURY MARKETING &amp; CREATIVE AGENCY</b></span>
 <h2 class="b11-rise b11-d4" style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 31px; line-height: 1.2; letter-spacing: 3px">FURTHER THAN<br><em style="font-style: italic; letter-spacing: 0; color: #6E8090">you could</em> GO ALONE</h2>
@@ -169,7 +169,7 @@ a:hover{color:#6E8090}
 </section>
 
 <!-- ============ PEOPLE WORKING WITH PEOPLE ============ -->
-<section class="pw" style="padding: 110px 24px 100px; display: flex; flex-direction: column; align-items: center; gap: 30px; text-align: center; overflow: hidden">
+<section class="pw" style="padding: 110px 24px 100px; display: flex; flex-direction: column; align-items: center; gap: 30px; text-align: center; overflow: clip">
 <h1 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 36px; line-height: 1.15; letter-spacing: 6px"><span class="pw-l" style="display: block">PEOPLE WORKING</span><span class="pw-r" style="display: block"><em style="font-style: italic; letter-spacing: 0; color: #6E8090">with</em> PEOPLE</span></h1>
 <span class="pw-fade" style="font-size: 10px; letter-spacing: 6px; color: #7D5E3C">OUR LEGACY</span>
 <span aria-hidden="true" class="pw-line" style="display: block; width: 80px; height: 1px; background: {{blue}}"></span>
@@ -177,7 +177,7 @@ a:hover{color:#6E8090}
 </section>
 
 <!-- ============ THE FOUNDERS, TOGETHER ============ -->
-<section aria-label="Hollie and Juls" style="position: relative; height: 600px; overflow: hidden; background: #C9D2D9">
+<section aria-label="Hollie and Juls" style="position: relative; height: 600px; overflow: clip; background: #C9D2D9">
 <video ref="{{vref}}" src="../assets/founders.mp4" poster="../assets/img/c8c989ddaee8e37b11b8d8070e62ff85.jpg" autoplay="" muted="" loop="" playsinline="" aria-label="Hollie and Juls, the founders of By Eleven, riding side by side through calm blue sea" style="position: absolute; inset: 0; width: 390px; height: 600px; object-fit: cover; object-position: 50% 50%"></video>
 <div aria-hidden="true" style="position: absolute; left: 0; right: 0; bottom: 0; height: 280px; background: linear-gradient(180deg, rgba(46,63,77,0) 0%, rgba(46,63,77,0.55) 100%)"></div>
 <button type="button" onClick="{{toggleSound}}" aria-label="{{soundLabel}}" aria-pressed="{{soundPressed}}" style="position: absolute; top: 20px; right: 20px; display: flex; align-items: center; gap: 10px; min-height: 44px; padding: 0 18px; background: rgba(242, 236, 226, 0.85); border: 0; border-radius: 22px; color: #2E3F4D; font-family: 'Jost', sans-serif; font-size: 9px; letter-spacing: 3px; cursor: pointer">
@@ -192,7 +192,7 @@ a:hover{color:#6E8090}
 </section>
 
 <!-- ============ WHY ELEVEN ============ -->
-<section class="b11-rv" style="position: relative; padding: 110px 24px 100px; display: flex; flex-direction: column; align-items: center; gap: 44px; text-align: center; overflow: hidden; height: 762px">
+<section class="b11-rv" style="position: relative; padding: 110px 24px 100px; display: flex; flex-direction: column; align-items: center; gap: 44px; text-align: center; overflow: clip; height: 762px">
 <div aria-hidden="true" class="b11-xi-wrap" style="position: absolute; inset: 0; pointer-events: none"><div class="b11-xi" style="position: absolute; left: 50%; top: 22%; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 300px; line-height: 1; color: #E4D9C8; transform: translate(-50%, -50%)">XI</div></div>
 <div style="position: relative; display: flex; flex-direction: column; align-items: center; gap: 18px">
 <span class="b11-x b11-t1" style="font-size: 10px; letter-spacing: 6px; color: #7D5E3C">THE NAME</span>
@@ -207,7 +207,7 @@ a:hover{color:#6E8090}
 </section>
 
 <!-- ============ CLOSE ============ -->
-<section class="b11-rv" style="position: relative; background: #55697A; color: #F2ECE2; padding: 100px 24px 110px; display: flex; flex-direction: column; align-items: center; gap: 28px; text-align: center; overflow: hidden; height: 369px">
+<section class="b11-rv" style="position: relative; background: #55697A; color: #F2ECE2; padding: 100px 24px 110px; display: flex; flex-direction: column; align-items: center; gap: 28px; text-align: center; overflow: clip; height: 369px">
 <span aria-hidden="true" class="b11-glow" style="left: -301px; top: -326px; position: absolute"></span>
 <span aria-hidden="true" class="b11-drop" style="position: relative; display: block; width: 1px; height: 70px; background: #F2ECE2"></span>
 <span class="b11-x b11-t3" style="position: relative; font-size: 10px; letter-spacing: 6px; color: #DCE3E8">BY APPOINTMENT</span>
@@ -225,7 +225,7 @@ a:hover{color:#6E8090}
 <div style="display: flex; gap: 26px; font-size: 10px; letter-spacing: 3px; color: #BEA683"><a href="tel:+971501603791" style="min-height: 36px; display: flex; align-items: center">CALL UAE</a><a href="tel:+447591914359" style="min-height: 36px; display: flex; align-items: center">UK</a><a href="tel:+34647561582" style="min-height: 36px; display: flex; align-items: center">ES</a></div>
 </div>
 <form class="b11-field b11-x b11-t4" style="display: flex; align-items: center; width: 100%; border-bottom: 1px solid #F2ECE2">
-<label for="letter-m" style="position: absolute; width: 1px; height: 1px; overflow: hidden">Email address for the By Eleven letter</label>
+<label for="letter-m" style="position: absolute; width: 1px; height: 1px; overflow: clip">Email address for the By Eleven letter</label>
 <input id="letter-m" type="email" placeholder="Join the By Eleven letter" style="flex-grow: 1; min-width: 0; min-height: 46px; background: transparent; border: 0; color: #F2ECE2; font-family: 'Jost', sans-serif; font-size: 16px">
 <button type="submit" style="min-height: 46px; padding: 0 0 0 12px; background: transparent; border: 0; color: #BEA683; font-family: 'Jost', sans-serif; font-size: 10px; letter-spacing: 3px; cursor: pointer">SUBSCRIBE</button>
 </form>

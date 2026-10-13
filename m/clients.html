@@ -70,7 +70,7 @@ a:hover{color:#6E8090}
 @keyframes b11-unveil{from{transform:translateY(110%)}to{transform:none}}
 @keyframes b11-xi-in{from{opacity:0;filter:blur(24px)}to{opacity:1;filter:blur(0)}}
 @keyframes b11-drop{from{transform:scaleY(0)}to{transform:scaleY(1)}}
-.b11-mask{display:block;overflow:hidden;padding-bottom:.08em}
+.b11-mask{display:block;overflow:clip;padding-bottom:.08em}
 .b11-mask>span{display:block}
 .b11-rule{position:absolute;left:0;top:0;height:2px;width:100%;transform-origin:left center;transition:background-color .8s ease}
 .b11-drop{transform-origin:top center}
@@ -82,7 +82,7 @@ a:hover{color:#6E8090}
 .b11-xi{animation:b11-float 14s ease-in-out infinite alternate}
 .b11-glow{position:absolute;width:900px;height:900px;border-radius:50%;background:radial-gradient(circle,rgba(242,236,226,.16) 0%,rgba(242,236,226,0) 65%);pointer-events:none;animation:b11-glow 22s ease-in-out infinite alternate}
 @keyframes b11-glow{0%{transform:translate(-30%,-10%)}50%{transform:translate(60%,20%)}100%{transform:translate(120%,-15%)}}
-.b11-shine{position:relative;overflow:hidden;transition:letter-spacing .8s cubic-bezier(.2,.7,.2,1),background-color .6s ease,color .6s ease}
+.b11-shine{position:relative;overflow:clip;transition:letter-spacing .8s cubic-bezier(.2,.7,.2,1),background-color .6s ease,color .6s ease}
 .b11-shine::after{content:"";position:absolute;top:0;bottom:0;left:-60%;width:40%;background:linear-gradient(100deg,rgba(255,255,255,0) 0%,rgba(255,255,255,.55) 50%,rgba(255,255,255,0) 100%);transform:skewX(-20deg);animation:b11-sheen 5s ease-in-out 2.5s infinite}
 @keyframes b11-sheen{0%{left:-60%}35%,100%{left:130%}}
 .b11-shine:hover{letter-spacing:8px !important;background-color:#EEE7DC !important;color:#402615 !important}
@@ -135,7 +135,7 @@ a:hover{color:#6E8090}
 @media (prefers-reduced-motion:reduce){.e-pillar,.e-gatelight,.e-bar,.e-track{animation:none}.e-pane{transition:none}}
 
 /* ===== CLIENTS page ===== */
-.cl-row{overflow:hidden;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 12%,#000 88%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0%,#000 12%,#000 88%,transparent 100%)}
+.cl-row{overflow:clip;-webkit-mask-image:linear-gradient(90deg,transparent 0%,#000 12%,#000 88%,transparent 100%);mask-image:linear-gradient(90deg,transparent 0%,#000 12%,#000 88%,transparent 100%)}
 .cl-track{display:flex;width:max-content;animation:cl-move 55s linear infinite}
 .cl-track.cl-rev{animation-direction:reverse;animation-duration:62s}
 .cl-row:hover .cl-track{animation-play-state:paused}
@@ -182,7 +182,7 @@ a:hover{color:#6E8090}
 .t-btn .t-n{font-size:24px}
 </style>
 </helmet>
-<div style="position: relative; width: 390px; height: 2022px; display: flex; flex-direction: column; background: #EEE7DC; overflow: hidden">
+<div style="position: relative; width: 390px; height: 2022px; display: flex; flex-direction: column; background: #EEE7DC; overflow: clip">
 <sc-if value="{{menuOpen}}">
 <div class="m-sheet" role="dialog" aria-label="Menu">
 <div style="display: flex; justify-content: space-between; align-items: center; min-height: 52px">
@@ -270,7 +270,7 @@ a:hover{color:#6E8090}
 <div style="display: flex; gap: 26px; font-size: 10px; letter-spacing: 3px; color: #BEA683"><a href="tel:+971501603791" style="min-height: 36px; display: flex; align-items: center">CALL UAE</a><a href="tel:+447591914359" style="min-height: 36px; display: flex; align-items: center">UK</a><a href="tel:+34647561582" style="min-height: 36px; display: flex; align-items: center">ES</a></div>
 </div>
 <form class="b11-field b11-x b11-t4" style="display: flex; align-items: center; width: 100%; border-bottom: 1px solid #F2ECE2">
-<label for="letter-m" style="position: absolute; width: 1px; height: 1px; overflow: hidden">Email address for the By Eleven letter</label>
+<label for="letter-m" style="position: absolute; width: 1px; height: 1px; overflow: clip">Email address for the By Eleven letter</label>
 <input id="letter-m" type="email" placeholder="Join the By Eleven letter" style="flex-grow: 1; min-width: 0; min-height: 46px; background: transparent; border: 0; color: #F2ECE2; font-family: 'Jost', sans-serif; font-size: 16px">
 <button type="submit" style="min-height: 46px; padding: 0 0 0 12px; background: transparent; border: 0; color: #BEA683; font-family: 'Jost', sans-serif; font-size: 10px; letter-spacing: 3px; cursor: pointer">SUBSCRIBE</button>
 </form>
