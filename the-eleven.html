@@ -143,6 +143,25 @@ a:hover{color:#6E8090}
 .e-chapter:hover .e-word{color:#55697A}
 .e-word{transition:color .8s ease}
 @media (prefers-reduced-motion:reduce){.e-pillar,.e-gatelight,.e-bar,.e-track{animation:none}.e-pane{transition:none}}
+
+/* ===== The Eleven: more life ===== */
+@keyframes el-drift{from{transform:scale(1)}to{transform:scale(1.09) translateY(-14px)}}
+@keyframes el-shine{from{text-shadow:0 0 0 rgba(214,200,177,0)}to{text-shadow:0 0 38px rgba(214,200,177,.5)}}
+@keyframes el-zoom{from{transform:scale(1.18)}to{transform:scale(1)}}
+@keyframes el-sl-l{from{opacity:0;transform:translateX(-46px);filter:blur(6px)}to{opacity:1;transform:none;filter:blur(0)}}
+@keyframes el-sl-r{from{opacity:0;transform:translateX(46px);filter:blur(6px)}to{opacity:1;transform:none;filter:blur(0)}}
+.e-eleven{animation:el-shine 6s ease-in-out infinite alternate}
+.el-frame{overflow:hidden}
+@supports (animation-timeline: view()){
+.b11-rv .e-eleven.b11-x{animation:b11-silk linear both,el-shine 6s ease-in-out infinite alternate;animation-timeline:--b11rv,auto;animation-range:entry 8% entry 65%,normal}
+.el-zoom{animation:el-zoom linear both;animation-timeline:view();animation-range:entry 0% exit 35%}
+}
+@media (prefers-reduced-motion:reduce){.e-eleven,.el-zoom,.el-drift,.m-svc{animation:none!important}}
+@supports (animation-timeline: view()){
+.b11-rv .e-svc.b11-x:nth-child(odd){animation-name:el-sl-l}
+.b11-rv .e-svc.b11-x:nth-child(even){animation-name:el-sl-r}
+}
+.el-drift-wrap{animation:el-drift 22s ease-in-out infinite alternate}
 </style>
 </helmet>
 <div style="width: 1440px; height: 3570px; display: flex; flex-direction: column; background: #EEE7DC; overflow: clip">
@@ -159,7 +178,7 @@ a:hover{color:#6E8090}
 <nav aria-label="Secondary" style="justify-self: end; display: flex; align-items: center; gap: 44px; font-size: 11px; letter-spacing: 4px"><a href="clients.html">CLIENTS</a><a href="#contact">CONTACT</a>
 <a href="mailto:hollie@byelevencreative.com?subject=A%20new%20conversation" style="display: flex; align-items: center; min-height: 44px; padding: 0 24px; background: #402615; color: #EEE7DC">BEGIN</a></nav>
 </header>
-<img class="b11-x b11-t4" src="assets/img/439d54eb264d4f139619c2cee1c02805.jpg" alt="A luxury stable with a warm timber ceiling, light falling through a timber skylight onto a stone aisle" style="position: absolute; left: 820px; top: 150px; width: 520px; height: 760px; object-fit: cover; object-position: center center">
+<div class="b11-x b11-t4 el-frame" style="position: absolute; left: 820px; top: 150px; width: 520px; height: 760px"><img class="el-drift-wrap" src="assets/img/439d54eb264d4f139619c2cee1c02805.jpg" alt="A luxury stable with a warm timber ceiling, light falling through a timber skylight onto a stone aisle" style="display: block; width: 520px; height: 760px; object-fit: cover; object-position: center center"></div>
 <div style="position: absolute; left: 100px; top: 190px; width: 620px; display: flex; flex-direction: column; gap: 30px">
 <span class="b11-x" style="font-size: 11px; letter-spacing: 6px; color: #6E8090">OUR STORY</span>
 <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 60px; line-height: 1.02; letter-spacing: 6px; color: #402615"><span class="b11-mask"><span>WHY BY ELEVEN:</span></span><span class="b11-mask"><span>A HOUSE OF</span></span><span class="b11-mask"><span>ELEVEN CRAFTS</span></span></h2>
@@ -183,7 +202,7 @@ a:hover{color:#6E8090}
 
 <!-- ============ THE FOUNDERS ============ -->
 <section class="b11-rv" style="position: relative; background: #EEE7DC; padding: 150px 100px 160px; display: grid; grid-template-columns: 540px minmax(0, 1fr); column-gap: 120px; align-items: center; overflow: hidden">
-<img class="b11-x" src="assets/img/d551ac33d11af5e0482e534c45b35a6e.jpg" alt="Hollie and Juls, the founders of By Eleven, working together in a white studio" style="display: block; width: 595px; height: 795px; object-fit: cover; object-position: center 60%">
+<div class="b11-x el-frame" style="width: 595px; height: 795px"><img class="el-zoom" src="assets/img/d551ac33d11af5e0482e534c45b35a6e.jpg" alt="Hollie and Juls, the founders of By Eleven, working together in a white studio" style="display: block; width: 595px; height: 795px; object-fit: cover; object-position: center 60%"></div>
 <div style="display: flex; flex-direction: column; gap: 28px">
 <span class="b11-x b11-t1" style="font-size: 11px; letter-spacing: 6px; color: #6E8090"><b>THE FOUNDERS</b></span>
 <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 58px; line-height: 1.05; letter-spacing: 6px; color: #402615"><span class="b11-mask"><span>TWO RIDERS,</span></span><span class="b11-mask"><span><b><em style="font-style: italic; letter-spacing: 0px; color: rgb(110, 128, 144)">one</em> </b>DIRECTION</span></span></h2>

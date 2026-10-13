@@ -156,6 +156,25 @@ a:hover{color:#6E8090}
 .m-svc-n{font-style:italic;font-size:15px;letter-spacing:0;color:#BEA683;margin-right:7px}
 .m-svc em{font-style:italic;letter-spacing:0;color:#BEA683;padding:0 2px}
 .e-eleven{font-size:150px;letter-spacing:3px}
+
+/* ===== The Eleven: more life ===== */
+@keyframes el-drift{from{transform:scale(1)}to{transform:scale(1.09) translateY(-14px)}}
+@keyframes el-shine{from{text-shadow:0 0 0 rgba(214,200,177,0)}to{text-shadow:0 0 38px rgba(214,200,177,.5)}}
+@keyframes el-zoom{from{transform:scale(1.18)}to{transform:scale(1)}}
+@keyframes el-sl-l{from{opacity:0;transform:translateX(-46px);filter:blur(6px)}to{opacity:1;transform:none;filter:blur(0)}}
+@keyframes el-sl-r{from{opacity:0;transform:translateX(46px);filter:blur(6px)}to{opacity:1;transform:none;filter:blur(0)}}
+.e-eleven{animation:el-shine 6s ease-in-out infinite alternate}
+.el-frame{overflow:hidden}
+@supports (animation-timeline: view()){
+.b11-rv .e-eleven.b11-x{animation:b11-silk linear both,el-shine 6s ease-in-out infinite alternate;animation-timeline:--b11rv,auto;animation-range:entry 8% entry 65%,normal}
+.el-zoom{animation:el-zoom linear both;animation-timeline:view();animation-range:entry 0% exit 35%}
+}
+@media (prefers-reduced-motion:reduce){.e-eleven,.el-zoom,.el-drift,.m-svc{animation:none!important}}
+.el-drift{animation:b11-emerge 2.6s cubic-bezier(.2,.7,.2,1) .4s both,el-drift 20s ease-in-out 3s infinite alternate}
+@supports (animation-timeline: view()){
+.m-svc:nth-child(odd){animation:el-sl-l linear both;animation-timeline:view();animation-range:entry 0% entry 90%}
+.m-svc:nth-child(even){animation:el-sl-r linear both;animation-timeline:view();animation-range:entry 0% entry 90%}
+}
 </style>
 </helmet>
 <div style="position: relative; width: 390px; height: 4292px; display: flex; flex-direction: column; background: #EEE7DC; overflow: hidden">
@@ -181,7 +200,7 @@ a:hover{color:#6E8090}
 
 <!-- ============ HERO: THE STABLE ============ -->
 <section class="b11-rv" style="position: relative; height: 780px; background: #2A1A10; overflow: hidden">
-<img class="b11-emerge" src="../assets/img/439d54eb264d4f139619c2cee1c02805.jpg" alt="A luxury stable with a warm timber ceiling, light falling through a timber skylight onto a stone aisle" style="position: absolute; inset: 0; width: 390px; height: 780px; object-fit: cover; object-position: 50% 40%">
+<img class="el-drift" src="../assets/img/439d54eb264d4f139619c2cee1c02805.jpg" alt="A luxury stable with a warm timber ceiling, light falling through a timber skylight onto a stone aisle" style="position: absolute; inset: 0; width: 390px; height: 780px; object-fit: cover; object-position: 50% 40%">
 <div aria-hidden="true" style="position: absolute; inset: 0; background: linear-gradient(180deg, rgba(30,18,10,.55) 0%, rgba(30,18,10,0) 22%, rgba(30,18,10,0) 48%, rgba(30,18,10,.78) 100%)"></div>
 <header style="position: relative; z-index: 3; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; padding: 22px 24px; color: #F2ECE2">
 <span></span>
@@ -216,7 +235,7 @@ a:hover{color:#6E8090}
 
 <!-- ============ THE FOUNDERS ============ -->
 <section class="b11-rv" style="position: relative; background: #EEE7DC; overflow: hidden">
-<img class="b11-x" src="../assets/img/d551ac33d11af5e0482e534c45b35a6e.jpg" alt="Hollie and Juls, the founders of By Eleven, working together in a white studio" style="display: block; width: 390px; height: 540px; object-fit: cover; object-position: center 55%">
+<div class="el-frame" style="width: 390px; height: 540px"><img class="el-zoom" src="../assets/img/d551ac33d11af5e0482e534c45b35a6e.jpg" alt="Hollie and Juls, the founders of By Eleven, working together in a white studio" style="display: block; width: 390px; height: 540px; object-fit: cover; object-position: center 55%"></div>
 <div style="padding: 80px 40px 100px; display: flex; flex-direction: column; align-items: center; gap: 26px; text-align: center">
 <span class="b11-x b11-t1" style="font-size: 10px; letter-spacing: 6px; color: #6E8090"><b>THE FOUNDERS</b></span>
 <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 32px; line-height: 1.12; letter-spacing: 6px; color: #402615"><span class="b11-mask"><span>TWO RIDERS,</span></span><span class="b11-mask"><span><em style="font-style: italic; letter-spacing: 0; font-size: 38px; color: #6E8090">one</em> DIRECTION</span></span></h2>
@@ -230,9 +249,10 @@ a:hover{color:#6E8090}
 </section>
 
 <!-- ============ PEOPLE WORKING WITH PEOPLE ============ -->
-<section class="b11-rv" style="background: #55697A; padding: 110px 40px 120px; display: flex; flex-direction: column; align-items: center; gap: 30px; text-align: center">
-<h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 32px; line-height: 1.1; letter-spacing: 7px; color: #F2ECE2"><span class="b11-mask"><span>PEOPLE</span></span><span class="b11-mask"><span><em style="font-style: italic; letter-spacing: 0; font-size: 40px; color: #DCE3E8">working with</em></span></span><span class="b11-mask"><span>PEOPLE</span></span></h2>
-<p class="b11-x b11-t4" style="margin: 0; font-size: 15px; line-height: 2; font-weight: 300; color: #DCE3E8">Like horse and rider, we move as one with the brands we carry. Your team and ours, side by side, further than you could go alone.</p>
+<section class="b11-rv" style="position: relative; overflow: hidden; background: #55697A; padding: 110px 40px 120px; display: flex; flex-direction: column; align-items: center; gap: 30px; text-align: center">
+<span aria-hidden="true" class="b11-glow" style="left: -320px; top: -300px"></span>
+<h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 32px; line-height: 1.1; letter-spacing: 7px; color: #F2ECE2; position: relative"><span class="b11-mask"><span>PEOPLE</span></span><span class="b11-mask"><span><em style="font-style: italic; letter-spacing: 0; font-size: 40px; color: #DCE3E8">working with</em></span></span><span class="b11-mask"><span>PEOPLE</span></span></h2>
+<p class="b11-x b11-t4" style="margin: 0; font-size: 15px; line-height: 2; font-weight: 300; color: #DCE3E8; position: relative">Like horse and rider, we move as one with the brands we carry. Your team and ours, side by side, further than you could go alone.</p>
 </section>
 
 <!-- ============ FOOTER ============ -->
