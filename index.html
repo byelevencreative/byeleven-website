@@ -103,9 +103,25 @@ a:hover{color:#6E8090}
 .b11-rv .b11-xi-wrap{animation:b11-xi-in linear both;animation-timeline:--b11rv;animation-range:entry 0% entry 80%}
 }
 @media (prefers-reduced-motion:reduce){.b11-rv *,.b11-rv *::before,.b11-glow,.b11-shine::after,.b11-xi{animation:none !important}}
+
+/* ===== People working with people: the two lines ride in from either side and meet; the story inks in as you read ===== */
+@keyframes pw-l{from{opacity:0;transform:translateX(-160px);filter:blur(8px)}to{opacity:1;transform:none;filter:blur(0)}}
+@keyframes pw-r{from{opacity:0;transform:translateX(160px);filter:blur(8px)}to{opacity:1;transform:none;filter:blur(0)}}
+@keyframes pw-fade{from{opacity:0;transform:translateY(10px)}to{opacity:1;transform:none}}
+@keyframes pw-draw{from{transform:scaleX(0)}to{transform:scaleX(1)}}
+@keyframes pw-ink{from{background-position:0 100%}to{background-position:0 0}}
+@supports (animation-timeline: view()){
+.pw{view-timeline-name:--pw}
+.pw .pw-l{animation:pw-l linear both;animation-timeline:--pw;animation-range:entry 15% cover 42%}
+.pw .pw-r{animation:pw-r linear both;animation-timeline:--pw;animation-range:entry 22% cover 48%}
+.pw .pw-fade{animation:pw-fade linear both;animation-timeline:--pw;animation-range:cover 30% cover 45%}
+.pw .pw-line{transform-origin:center;animation:pw-draw linear both;animation-timeline:--pw;animation-range:cover 32% cover 50%}
+.pw .pw-ink{background-image:linear-gradient(180deg,#5E4A38 0%,#5E4A38 46%,rgba(94,74,56,.18) 54%,rgba(94,74,56,.18) 100%);background-size:100% 220%;background-repeat:no-repeat;-webkit-background-clip:text;background-clip:text;color:transparent;animation:pw-ink linear both;animation-timeline:--pw;animation-range:cover 35% cover 68%}
+}
+@media (prefers-reduced-motion:reduce){.pw .pw-l,.pw .pw-r,.pw .pw-fade,.pw .pw-line,.pw .pw-ink{animation:none!important;opacity:1;transform:none;filter:none;color:#5E4A38;background:none}}
 </style>
 </helmet>
-<div style="width: 1440px; height: 4530px; display: flex; flex-direction: column; background: #EEE7DC; overflow: hidden">
+<div style="width: 1440px; height: 4530px; display: flex; flex-direction: column; background: #EEE7DC; overflow: clip">
 
 <!-- ============ HERO: THE HORSE ============ -->
 
@@ -137,11 +153,11 @@ a:hover{color:#6E8090}
 
 
 <!-- ============ WHY ELEVEN ============ -->
-<section style="padding: 170px 100px 160px; display: flex; flex-direction: column; align-items: center; gap: 40px; text-align: center">
-<h1 style="margin: 0; white-space: nowrap; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 56px; line-height: 1; letter-spacing: 12px"><span class="b11-rise b11-d4">PEOPLE WORKING <br><em style="font-style: italic; letter-spacing: 0px; color: rgb(110, 128, 144)">with</em> PEOPLE</span></h1><span class="b11-rise" style="font-size: 11px; letter-spacing: 6px; color: #7D5E3C">OUR LEGACY</span>
+<section class="pw" style="padding: 170px 100px 160px; display: flex; flex-direction: column; align-items: center; gap: 40px; text-align: center; overflow: hidden">
+<h1 style="margin: 0; white-space: nowrap; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 56px; line-height: 1; letter-spacing: 12px"><span class="pw-l" style="display: block">PEOPLE WORKING</span><span class="pw-r" style="display: block"><em style="font-style: italic; letter-spacing: 0px; color: rgb(110, 128, 144)">with</em> PEOPLE</span></h1><span class="pw-fade" style="font-size: 11px; letter-spacing: 6px; color: #7D5E3C">OUR LEGACY</span>
 
-<span aria-hidden="true" class="b11-line" style="display: block; width: 120px; height: 1px; background: {{blue}}"></span>
-<p style="margin: 0; max-width: 720px; font-size: 18px; line-height: 1.9; font-weight: 300; color: #5E4A38"><b>Horse and rider are the oldest partnership in history: two beings who, together, go further than either could alone. That is how we work. Behind every brand there are people working with people, your team and ours, side by side. If you are launching something new, reinventing an established name or entering a new market, we go the distance together.</b></p>
+<span aria-hidden="true" class="pw-line" style="display: block; width: 120px; height: 1px; background: {{blue}}"></span>
+<p class="pw-ink" style="margin: 0; max-width: 720px; font-size: 18px; line-height: 1.9; font-weight: 300; color: #5E4A38"><b>Horse and rider are the oldest partnership in history: two beings who, together, go further than either could alone. That is how we work. Behind every brand there are people working with people, your team and ours, side by side. If you are launching something new, reinventing an established name or entering a new market, we go the distance together.</b></p>
 </section>
 
 <!-- ============ THE FOUNDERS, TOGETHER ============ -->
