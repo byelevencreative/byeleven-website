@@ -77,6 +77,7 @@ h1 span{display:block}
 .stat span{font-size:9px;letter-spacing:3.5px;color:var(--mojave);text-transform:uppercase}
 .portrait-wrap{position:relative;z-index:1;padding:0 26px 26px 0;max-width:100%}
 .portrait-wrap::before{content:"";position:absolute;right:0;bottom:0;width:78%;height:72%;background:var(--blue);animation:rise 1.8s var(--ease) .9s both}
+.portrait::before{content:"";display:block;padding-top:133.3333%}
 .portrait{position:relative;aspect-ratio:3/4;max-width:100%;overflow:hidden;background:var(--almond);animation:unveil 2.2s cubic-bezier(.7,0,.2,1) .2s both}
 .portrait img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:center top;animation:settle 9s var(--ease) .2s both}
 @keyframes unveil{from{clip-path:inset(100% 0 0 0)}to{clip-path:inset(0)}}
@@ -133,6 +134,8 @@ h2{margin:0;font-family:var(--serif);font-weight:300;font-size:clamp(36px,4.6vw,
 .card:hover .frame{transform:translateY(-8px)}
 .frame img,.frame video{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform 1.2s var(--ease)}
 .card:hover .frame img,.card:hover .frame video{transform:scale(1.04)}
+.frame::before{content:"";display:block;padding-top:177.7778%}
+.card .frame{width:100%}
 .frame::after{content:"";position:absolute;inset:0;background:rgba(158,171,183,0);transition:background-color .7s ease;pointer-events:none}
 .card:hover .frame::after{background:rgba(158,171,183,.22)}
 .frame .ph .xi{font-size:120px}
@@ -451,7 +454,7 @@ const STATS = [
    or leave '' to show the name as an elegant wordmark. Leave the list
    empty [] to use the brand names from PROJECTS instead. */
 const BRANDS = [
-  { name:'Yas Marina Island', logo:'media/logos/yas-marina.png', tall:true }, { name:'NK Skin', logo:'' }, { name:'Ralph Lauren', logo:'media/logos/ralph-lauren.png' }, { name:'Makeup Gallery', logo:'media/logos/makeup-gallery.png' }, { name:'B Perfect', logo:'media/logos/b-perfect.png' }, { name:'Mini Spectra', logo:'media/logos/mini-spectra.png', tall:true }, { name:"L'Oréal", logo:'media/logos/loreal.png' }, { name:'Color Wow', logo:'media/logos/color-wow.png', tall:true }, { name:'PrettyLittleThing', logo:'media/logos/prettylittlething.png' }, { name:'ASOS', logo:'media/logos/asos.png' }, { name:'Avenue Dubai', logo:'' }, { name:'Beauty Works', logo:'media/logos/beauty-works.png', tall:true }, { name:'Dilara Beauty Salon', logo:'media/logos/dilara.png', tall:true }, { name:'OOMI', logo:'media/logos/oomi.png' }, { name:'Greenderma', logo:'media/logos/greenderma.png' }, { name:'Garnier', logo:'media/logos/garnier.png' }, { name:'La Roche-Posay', logo:'media/logos/la-roche-posay.png' }, { name:'Leña', logo:'media/logos/lena.png' }, { name:'Vovia', logo:'media/logos/vovia.png' }
+  { name:'Yas Marina Island', logo:'media/logos/yas-marina.png', tall:true }, { name:'NK Skin', logo:'' }, { name:'Ralph Lauren', logo:'media/logos/ralph-lauren.png' }, { name:'Makeup Gallery', logo:'media/logos/makeup-gallery.png' }, { name:'B Perfect', logo:'media/logos/b-perfect.png' }, { name:'Mini Spectra', logo:'media/logos/mini-spectra.png', tall:true }, { name:"L'Oréal", logo:'media/logos/loreal.png' }, { name:'Color Wow', logo:'media/logos/color-wow.png', tall:true }, { name:'PrettyLittleThing', logo:'media/logos/prettylittlething.png' }, { name:'ASOS', logo:'media/logos/asos.png' }, { name:'Avenue Dubai', logo:'' }, { name:'Beauty Works', logo:'media/logos/beauty-works.png', tall:true }, { name:'Dilara Beauty Salon', logo:'media/logos/dilara.png', tall:true }, { name:'OOMI', logo:'media/logos/oomi.png' }, { name:'Greenderma', logo:'media/logos/greenderma.png' }, { name:'Garnier', logo:'media/logos/garnier.png' }, { name:'La Roche-Posay', logo:'media/logos/la-roche-posay.png' }, { name:'Leña', logo:'media/logos/lena.png' }, { name:'Vovia', logo:'media/logos/vovia.png' }, { name:'Six by Nico', logo:'' }
 ];
 
 const BAND = ['UGC', 'COLLABS', 'BEAUTY', 'HOSPITALITY', 'FASHION', 'LIFESTYLE', 'DUBAI', 'UNITED KINGDOM', 'SPAIN'];
@@ -551,7 +554,11 @@ const PROJECTS = [
     video:'media/vovia.mp4', poster:'media/vovia.jpg', link:'',
     brief:'A clean product showcase for Vovia: unboxing the bag from its dust bag, then showing the shape, the details and how it is carried, styled with a simple white dress so the bag is the focus. Captioned "The only black bag you need in your collection".',
     exchange:'Gifted: 1 bag',
-    deliverables:'1 vertical video, edited and posted', results:[] }
+    deliverables:'1 vertical video, edited and posted', results:[] },
+  { type:'UGC', brand:'Six by Nico', title:'Six by Nico Manchester: a Michelin tasting menu', category:'Hospitality', format:'Restaurant experience', platform:'', duration:'0:29', year:'',
+    video:'media/six-by-nico.mp4', poster:'media/six-by-nico.jpg', link:'',
+    brief:'UGC for Six by Nico in Manchester, a Michelin-recognised restaurant: the drinks menu, each course of the tasting menu arriving at the table and the details of every plate, filmed from above in a calm, natural style for the brand to use on its own channels.',
+    deliverables:'1 vertical video, edited', results:[] }
 ];
 
 const FORMATS = [
