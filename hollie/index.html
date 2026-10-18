@@ -579,6 +579,10 @@ const FORMATS = [
 
 
 /* ===================== page logic, no need to edit ===================== */
+/* Restaurants first, then travel, then everything else (order otherwise kept) */
+const ORDER = ['Hospitality', 'Lifestyle & Travel'];
+const rank = (p) => { const c = [].concat(p.category || []); const r = ORDER.findIndex((o) => c.includes(o)); return r < 0 ? ORDER.length : r; };
+PROJECTS.sort((a, b) => rank(a) - rank(b));
 const $ = (s) => document.querySelector(s);
 const esc = (s) => String(s ?? '').replace(/[&<>"]/g, (c) => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
 const ROMAN = ['I','II','III','IV','V','VI','VII','VIII','IX','X','XI','XII','XIII','XIV','XV','XVI','XVII','XVIII','XIX','XX'];
