@@ -454,7 +454,7 @@ const STATS = [
    or leave '' to show the name as an elegant wordmark. Leave the list
    empty [] to use the brand names from PROJECTS instead. */
 const BRANDS = [
-  { name:'Yas Marina Island', logo:'media/logos/yas-marina.png', tall:true }, { name:'NK Skin', logo:'' }, { name:'Ralph Lauren', logo:'media/logos/ralph-lauren.png' }, { name:'Makeup Gallery', logo:'media/logos/makeup-gallery.png' }, { name:'B Perfect', logo:'media/logos/b-perfect.png' }, { name:'Mini Spectra', logo:'media/logos/mini-spectra.png', tall:true }, { name:"L'Oréal", logo:'media/logos/loreal.png' }, { name:'Color Wow', logo:'media/logos/color-wow.png', tall:true }, { name:'PrettyLittleThing', logo:'media/logos/prettylittlething.png' }, { name:'ASOS', logo:'media/logos/asos.png' }, { name:'Avenue Dubai', logo:'' }, { name:'Beauty Works', logo:'media/logos/beauty-works.png', tall:true }, { name:'Dilara Beauty Salon', logo:'media/logos/dilara.png', tall:true }, { name:'OOMI', logo:'media/logos/oomi.png' }, { name:'Greenderma', logo:'media/logos/greenderma.png' }, { name:'Garnier', logo:'media/logos/garnier.png' }, { name:'La Roche-Posay', logo:'media/logos/la-roche-posay.png' }, { name:'Leña', logo:'media/logos/lena.png' }, { name:'Vovia', logo:'media/logos/vovia.png' }, { name:'Six by Nico', logo:'' }
+  { name:'Yas Marina Island', logo:'media/logos/yas-marina.png', tall:true }, { name:'NK Skin', logo:'' }, { name:'Ralph Lauren', logo:'media/logos/ralph-lauren.png' }, { name:'Makeup Gallery', logo:'media/logos/makeup-gallery.png' }, { name:'B Perfect', logo:'media/logos/b-perfect.png' }, { name:'Mini Spectra', logo:'media/logos/mini-spectra.png', tall:true }, { name:"L'Oréal", logo:'media/logos/loreal.png' }, { name:'Color Wow', logo:'media/logos/color-wow.png', tall:true }, { name:'PrettyLittleThing', logo:'media/logos/prettylittlething.png' }, { name:'ASOS', logo:'media/logos/asos.png' }, { name:'Avenue Dubai', logo:'' }, { name:'Beauty Works', logo:'media/logos/beauty-works.png', tall:true }, { name:'Dilara Beauty Salon', logo:'media/logos/dilara.png', tall:true }, { name:'OOMI', logo:'media/logos/oomi.png' }, { name:'Greenderma', logo:'media/logos/greenderma.png' }, { name:'Garnier', logo:'media/logos/garnier.png' }, { name:'La Roche-Posay', logo:'media/logos/la-roche-posay.png' }, { name:'Leña', logo:'media/logos/lena.png' }, { name:'Vovia', logo:'media/logos/vovia.png' }, { name:'Six by Nico', logo:'' }, { name:'Hamilton Island Air', logo:'' }
 ];
 
 const BAND = ['UGC', 'COLLABS', 'BEAUTY', 'HOSPITALITY', 'FASHION', 'LIFESTYLE', 'DUBAI', 'UNITED KINGDOM', 'SPAIN'];
@@ -558,6 +558,11 @@ const PROJECTS = [
   { type:'UGC', brand:'Six by Nico', title:'Six by Nico Manchester: a Michelin tasting menu', category:'Hospitality', format:'Restaurant experience', platform:'', duration:'0:29', year:'',
     video:'media/six-by-nico.mp4', poster:'media/six-by-nico.jpg', link:'',
     brief:'UGC for Six by Nico in Manchester, a Michelin-recognised restaurant: the drinks menu, each course of the tasting menu arriving at the table and the details of every plate, filmed from above in a calm, natural style for the brand to use on its own channels.',
+    deliverables:'1 vertical video, edited', results:[] },
+  { type:'UGC', brand:'Hamilton Island Air', title:'Hamilton Island Air: over the Great Barrier Reef', category:'Lifestyle & Travel', format:'Flight experience', platform:'', duration:'0:41', year:'',
+    video:'media/hamilton-island-air.mp4', poster:'media/hamilton-island-air.jpg', link:'',
+    brief:'A scenic helicopter flight with Hamilton Island Air, filmed from the cockpit: open ocean, Whitehaven Beach and the swirling sands of Hill Inlet, then the coral of the Great Barrier Reef from above. UGC for the brand to use on its own channels.',
+    exchange:'Discount on the experience',
     deliverables:'1 vertical video, edited', results:[] }
 ];
 
@@ -661,7 +666,7 @@ const lb = $('#lb');
 let cur = 0;
 function openLb(i) {
   cur = i; const p = PROJECTS[i];
-  const facts = [['Type', p.type ? (p.type === 'UGC' ? 'UGC for the brand' : 'Collab on my channels') : ''], ['Format', p.format], ['Platform', p.platform], ['Category', catsOf(p).join(' · ')], ['Collab terms', p.exchange]].filter((f) => f[1]);
+  const facts = [['Type', p.type ? (p.type === 'UGC' ? 'UGC for the brand' : 'Collab on my channels') : ''], ['Format', p.format], ['Platform', p.platform], ['Category', catsOf(p).join(' · ')], [p.type === 'UGC' ? 'Terms' : 'Collab terms', p.exchange]].filter((f) => f[1]);
   $('#lbInner').innerHTML = `
     <div class="lb">
       <div class="lb-media"><div class="frame">${media(p, i, true)}</div></div>
