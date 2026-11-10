@@ -202,7 +202,7 @@ a:hover{color:#6E8090}
 <span class="b11-x" style="font-size: 11px; letter-spacing: 7px; color: #6E8090">IN THEIR WORDS</span>
 <h2 style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-size: 54px; letter-spacing: 6px; color: #402615"><span class="b11-mask"><span>PEOPLE WORKING <em style="font-style: italic; letter-spacing: 0; color: #6E8090">with</em> PEOPLE</span></span></h2>
 </div>
-<div style="min-height: 590px; overflow: clip; display: flex; flex-direction: column; justify-content: center">
+<div style="min-height: 700px; overflow: clip; display: flex; flex-direction: column; justify-content: center">
 <sc-if value="{{isT1}}" hint-placeholder-val="{{true}}">
 <div class="t-pane" style="display: grid; grid-template-columns: 420px minmax(0, 1fr); column-gap: 70px; align-items: center">
 <img src="assets/img/a331221eef749256a82657a3de81882e.jpg" alt="Aiden, Manager of Sales at Creative Wrap, in black and white" style="display: block; width: 420px; height: 395px; object-fit: contain">
@@ -227,9 +227,12 @@ a:hover{color:#6E8090}
 <sc-if value="{{isT3}}" hint-placeholder-val="{{false}}">
 <div class="t-pane" style="display: grid; grid-template-columns: 420px minmax(0, 1fr); column-gap: 70px; align-items: center">
 <img src="assets/img/91ac2ee49131d6b20f18fac2d8c83852.jpg" alt="Aurita and Clare, the owners of NomadNest, holding their dog, in black and white" style="display: block; width: 420px; height: 420px; object-fit: contain">
-<div style="display: flex; flex-direction: column; gap: 30px">
+<div style="display: flex; flex-direction: column; gap: 20px">
 <span aria-hidden="true" style="font-family: 'Cormorant Garamond', serif; font-size: 120px; line-height: .5; height: 50px; color: #9EABB7">“</span>
-<p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-style: italic; font-size: 36px; line-height: 1.35; color: #402615">[ Aurita and Clare's words go here. ]</p>
+<p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-style: italic; font-size: 19px; line-height: 1.6; color: #402615">Working with Hollie and Juls at ByEleven was one of the best decisions we made for the NomadNest launch in the UAE. From the very first call they understood exactly what we were building and who we needed to reach, and they turned that into a social media strategy that felt completely true to our brand.</p>
+<p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-style: italic; font-size: 19px; line-height: 1.6; color: #402615">They are creative, organised and incredibly easy to work with. Every idea was thought through, every deadline was met, and they were always on hand to answer questions or adjust things quickly when we needed them to. Their knowledge of the UAE market made a real difference, and the content they created gave our launch the energy and professionalism we were hoping for.</p>
+<p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-style: italic; font-size: 19px; line-height: 1.6; color: #402615">What stood out most was how much they genuinely cared about our success. It never felt like we were just another client. They brought ideas we hadn't thought of, pushed us in the right direction, and made the whole process feel exciting rather than stressful.</p>
+<p style="margin: 0; font-family: 'Cormorant Garamond', serif; font-weight: 300; font-style: italic; font-size: 19px; line-height: 1.6; color: #402615">If you are launching a brand in the UAE and want a social media team that is talented, reliable and truly invested in your growth, we cannot recommend ByEleven highly enough. Thank you Hollie and Juls, we couldn't have done it without you.</p>
 <div style="display: flex; flex-direction: column; gap: 6px"><span style="font-size: 12px; font-weight: 500; letter-spacing: 5px; color: #402615">AURITA &amp; CLARE</span><span style="font-size: 10px; letter-spacing: 4px; color: #6E8090">OWNERS · NOMADNEST</span></div>
 </div>
 </div>
@@ -279,8 +282,8 @@ class Component extends DCLogic {
 constructor(props) {
 super(props);
 this.state = { t: 1 };
-this.order = [1, 2];
-this.restart = (cur) => { clearTimeout(this.timer); const t = cur || this.state.t; const d = t === 2 ? 24000 : 9000; this.timer = setTimeout(() => { const o = this.order; const n = o[(o.indexOf(t) + 1) % o.length]; this.setState({ t: n }); this.restart(n); }, d); };
+this.order = [1, 2, 3];
+this.restart = (cur) => { clearTimeout(this.timer); const t = cur || this.state.t; const d = t === 2 ? 24000 : t === 3 ? 32000 : 9000; this.timer = setTimeout(() => { const o = this.order; const n = o[(o.indexOf(t) + 1) % o.length]; this.setState({ t: n }); this.restart(n); }, d); };
 this.pickT1 = () => { this.setState({ t: 1 }); this.restart(1); };
 this.pickT2 = () => { this.setState({ t: 2 }); this.restart(2); };
 this.pickT3 = () => { this.setState({ t: 3 }); this.restart(3); };
